@@ -1,5 +1,5 @@
 /*
- * PCRMError.h
+ * PCRM_Error.h
  *
  *  Created on: Nov 20, 2015
  *      Author: tzunami
@@ -15,11 +15,11 @@ namespace PCRM {
 class PCRM_Error {
 public:
 	virtual ~PCRM_Error(){}
-	PCRM_Error(std::string e);
+    PCRM_Error(std::string e) : pcrm_error(e) {}
 	void PrintError() {}
 
 private:
-	std::string ew_error;
+    std::string pcrm_error;
 };
 /*************************************************/
 } /* namespace PCRM */

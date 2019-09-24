@@ -5,7 +5,11 @@
  *      Author: tzunami
  */
 
+<<<<<<< HEAD
 #include "PenguineCRM.h" // The Ethereum Workshop Library
+=======
+#include "PCRM.h" // The Ethereum Workshop Library
+>>>>>>> master
 #include <iostream> // Library to print to console
 
 using namespace PCRM;
@@ -17,7 +21,7 @@ Data *MyProcess(Person &b, Group &a) {
 	return data;
 }
 /*****************************************************/
-int main() {
+int main_test2() {
 	std::cout<<"STARTING...\n"<<std::endl;
 	/*****************************************************/
 	//Testing initializing

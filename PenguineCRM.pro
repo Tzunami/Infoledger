@@ -6,8 +6,6 @@ CONFIG -= qt
 SOURCES += \
         Data.cpp \
         Database.cpp \
-        Department.cpp \
-        PCRM_Error.cpp \
         Group.cpp \
         ID.cpp \
         Infoledge.cpp \
@@ -25,8 +23,9 @@ DISTFILES += \
 HEADERS += \
     Data.h \
     Database.h \
-    Department.h \
     PCRM.h \
+    PCRM.h \
+    PCRM_Error.h \
     PCRM_Error.h \
     Group.h \
     ID.h \
@@ -34,7 +33,6 @@ HEADERS += \
     Information.h \
     Knowledge.h \
     List.h \
-    PenguineCRM.h \
     People.h \
     Person.h \
     2 \

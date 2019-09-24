@@ -5,7 +5,11 @@
  *      Author: tzunami
  */
 
+<<<<<<< HEAD
 #include "PenguineCRM.h" // The Ethereum Workshop Library
+=======
+#include "PCRM.h" // The Ethereum Workshop Library
+>>>>>>> master
 #include <iostream> // Library to print to console
 
 using namespace PCRM;
@@ -81,15 +85,15 @@ int main() {
 
 	std::cout << "\nGroup group_1(alice, mary, Group One);" << std::endl;
 	Group group_1(alice, mary, "Group One");
-	group_1.Department::Print();
+    group_1.Print();
 
 	std::cout << "\nGroup group_2(sally, sam, Group Two);" << std::endl;
 	Group group_2(sally, sam, "Group Two");
-	group_2.Department::Print();
+    group_2.Print();
 
 	std::cout << "\nGroup group_3(bob, frank, Group Three);" << std::endl;
 	Group group_3(bob, frank, "Group Three");
-	group_3.Department::Print();
+    group_3.Print();
 
 	/*****************************************************
 	std::cout << "\nGroup & Person" << std::endl;
@@ -113,7 +117,7 @@ int main() {
 	std::cout << "\ngroup_1 = ppl_3;;" << std::endl;
 	group_1 = ppl_3;
 	group_1.Print();
-	/*****************************************************
+    *****************************************************
 	std::cout << "\nGroup, Person(s), & People" << std::endl;
 
 	std::cout << "\ngroup_1 += sam + bob;" << std::endl;
@@ -166,11 +170,11 @@ int main() {
 	std::cout << "\ngroup_1 -= group_2 - bob - alice;" << std::endl;
 	group_1 -= group_2 - bob - alice;
 	group_1.Print();
-	/*****************************************************
+    *****************************************************
 	std::cout << "\nGroup + Groups" << std::endl;
 	group_3 = group_1 + group_2;
 	group_3.Print();
-	/************************* End ****************************/
+    ************************* End ****************************/
 	std::cout << "\nEND" << std::endl;
 	return 0;
 }

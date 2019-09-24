@@ -7,7 +7,7 @@ SOURCES += \
         Data.cpp \
         Database.cpp \
         Department.cpp \
-        EW_Error.cpp \
+        PCRM_Error.cpp \
         Group.cpp \
         ID.cpp \
         Infoledge.cpp \
@@ -19,20 +19,22 @@ SOURCES += \
         testing.cpp \
         testing2.cpp
 
-DISTFILES +=
+DISTFILES += \
+    README.md
 
 HEADERS += \
     Data.h \
     Database.h \
     Department.h \
-    EW.h \
-    EW_Error.h \
+    PCRM.h \
+    PCRM_Error.h \
     Group.h \
     ID.h \
     Infoledge.h \
     Information.h \
     Knowledge.h \
     List.h \
+    PenguineCRM.h \
     People.h \
     Person.h \
     2 \

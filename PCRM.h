@@ -5,7 +5,6 @@
 #include "Knowledge.h" //Type D
 #include "Data.h" //Type D
 #include "Database.h" //Type C & D
-#include "Department.h" //Type A
-#include "Group.h"
+#include "Group.h" //Type A
 
 
