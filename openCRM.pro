@@ -15,10 +15,11 @@ SOURCES += \
         Knowledge.cpp \
         People.cpp \
         Person.cpp \
-        main.cpp
+        main.cpp \
+        testing.cpp \
+        testing2.cpp
 
-DISTFILES += \
-    openCRM.pro.user
+DISTFILES +=
 
 HEADERS += \
     Data.h \
@@ -34,5 +35,7 @@ HEADERS += \
     List.h \
     People.h \
     Person.h \
-    testing \
-    testing 2
+    2 \
+    2 \
+    2 \
+    2
