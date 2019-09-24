@@ -11,7 +11,7 @@
 
 using namespace PCRM;
 
-int main_test() {
+int test_basic() {
 	std::cout << "STARTING...\n" << std::endl;
 	/*****************************************************/
 	//Testing initializing

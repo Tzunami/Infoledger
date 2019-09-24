@@ -13,9 +13,9 @@ SOURCES += \
         Knowledge.cpp \
         People.cpp \
         Person.cpp \
-        main.cpp \
-        testing.cpp \
-        testing2.cpp
+        Test_basic.cpp \
+        Test_process.cpp \
+        main.cpp
 
 DISTFILES += \
     README.md

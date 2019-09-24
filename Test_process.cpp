@@ -18,7 +18,7 @@ Data *MyProcess(Person &b, Group &a) {
 	return data;
 }
 /*****************************************************/
-int main_test2() {
+int test_process() {
 	std::cout<<"STARTING...\n"<<std::endl;
 	/*****************************************************/
 	//Testing initializing
