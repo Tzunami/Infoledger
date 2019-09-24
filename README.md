@@ -22,27 +22,27 @@ Group = People + Person + Person + People<br/>
 Group = Group + People + Person<br/>
 
 # Bugs
-People + People creates duplicate Person if each People has the same Person.
-ppl_1 & ppl_2 both contain Alice
-ppl3 adds both ppl_1 and ppl_2, and when we see the output it is duplicated.
+People + People creates duplicate Person if each People has the same Person.<br/>
+ppl_1 & ppl_2 both contain Alice<br/>
+ppl3 adds both ppl_1 and ppl_2, and when we see the output it is duplicated.<br/>
 
-People ppl_1 = bob + frank + sam + alice;
-Name: Frank ID: 3
-Name: Bob ID: 2
-Name: Sam ID: 4
-Name: Alice ID: 5
+People ppl_1 = bob + frank + sam + alice;<br/>
+Name: Frank ID: 3<br/>
+Name: Bob ID: 2<br/>
+Name: Sam ID: 4<br/>
+Name: Alice ID: 5<br/>
 
-People ppl_2 = sally + alice + mary;
-Name: Alice ID: 5
-Name: Sally ID: 7
-Name: Mary ID: 6
+People ppl_2 = sally + alice + mary;<br/>
+Name: Alice ID: 5<br/>
+Name: Sally ID: 7<br/>
+Name: Mary ID: 6<br/>
 
-People ppl_3 = ppl_1 + ppl_2;
-Name: Frank ID: 3
-Name: Bob ID: 2
-Name: Sam ID: 4
-Name: Alice ID: 5
-Name: Alice ID: 5
-Name: Sally ID: 7
-Name: Mary ID: 6
+People ppl_3 = ppl_1 + ppl_2;<br/>
+Name: Frank ID: 3<br/>
+Name: Bob ID: 2<br/>
+Name: Sam ID: 4<br/>
+Name: Alice ID: 5<br/>
+Name: Alice ID: 5<br/>
+Name: Sally ID: 7<br/>
+Name: Mary ID: 6<br/>
 
