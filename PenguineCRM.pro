@@ -13,8 +13,6 @@ SOURCES += \
         Knowledge.cpp \
         People.cpp \
         Person.cpp \
-        Test_basic.cpp \
-        Test_process.cpp \
         main.cpp
 
 DISTFILES += \
@@ -38,4 +36,6 @@ HEADERS += \
     2 \
     2 \
     2 \
-    2
+    2 \
+    Test_basic.h \
+    Test_process.h

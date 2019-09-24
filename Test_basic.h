@@ -12,7 +12,7 @@
 using namespace PCRM;
 
 int test_basic() {
-	std::cout << "STARTING...\n" << std::endl;
+    std::cout << "STARTING BASIC TEST...\n" << std::endl;
 	/*****************************************************/
 	//Testing initializing
 	std::cout << "Initializing People & Data" << std::endl;
@@ -169,7 +169,7 @@ int test_basic() {
 	group_1.Print();
 
 	/************************* End ****************************/
-	std::cout << "\nEND" << std::endl;
+    std::cout << "\nEND BASIC TEST...\n" << std::endl;
 	return 0;
 }
 
