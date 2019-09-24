@@ -69,6 +69,7 @@ int main() {
 	ppl_2.Print();
 	std::cout << "\nppl_1" << std::endl;
 	ppl_1.Print();
+
 	/*****************************************************/
 	std::cout << "\nPeople" << std::endl;
 
@@ -76,7 +77,7 @@ int main() {
 	ppl_3 = ppl_1 - ppl_2;
 	ppl_3.Print();
 
-	/*****************************************************/
+	/*****************************************************/    
 	std::cout << "\nInitialize Group (Requires 2 Person(s))" << std::endl;
 
 	std::cout << "\nGroup group_1(alice, mary, Group One);" << std::endl;
@@ -91,7 +92,7 @@ int main() {
 	Group group_3(bob, frank, "Group Three");
     group_3.Print();
 
-	/*****************************************************
+    /*****************************************************/
 	std::cout << "\nGroup & Person" << std::endl;
 
 	std::cout << "\ngroup_1 = group_1 + bob;" << std::endl;
@@ -113,7 +114,8 @@ int main() {
 	std::cout << "\ngroup_1 = ppl_3;;" << std::endl;
 	group_1 = ppl_3;
 	group_1.Print();
-    *****************************************************
+
+    /*****************************************************/
 	std::cout << "\nGroup, Person(s), & People" << std::endl;
 
 	std::cout << "\ngroup_1 += sam + bob;" << std::endl;
@@ -166,11 +168,14 @@ int main() {
 	std::cout << "\ngroup_1 -= group_2 - bob - alice;" << std::endl;
 	group_1 -= group_2 - bob - alice;
 	group_1.Print();
-    *****************************************************
+
+    /*****************************************************/
 	std::cout << "\nGroup + Groups" << std::endl;
+
 	group_3 = group_1 + group_2;
 	group_3.Print();
-    ************************* End ****************************/
+
+    /************************* End ****************************/
 	std::cout << "\nEND" << std::endl;
 	return 0;
 }

@@ -20,3 +20,29 @@ Group = People + People<br/>
 Group = People + Person<br/>
 Group = People + Person + Person + People<br/>
 Group = Group + People + Person<br/>
+
+# Bugs
+People + People creates duplicate Person if each People has the same Person.
+ppl_1 & ppl_2 both contain Alice
+ppl3 adds both ppl_1 and ppl_2, and when we see the output it is duplicated.
+
+People ppl_1 = bob + frank + sam + alice;
+Name: Frank ID: 3
+Name: Bob ID: 2
+Name: Sam ID: 4
+Name: Alice ID: 5
+
+People ppl_2 = sally + alice + mary;
+Name: Alice ID: 5
+Name: Sally ID: 7
+Name: Mary ID: 6
+
+People ppl_3 = ppl_1 + ppl_2;
+Name: Frank ID: 3
+Name: Bob ID: 2
+Name: Sam ID: 4
+Name: Alice ID: 5
+Name: Alice ID: 5
+Name: Sally ID: 7
+Name: Mary ID: 6
+
