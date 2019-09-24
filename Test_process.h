@@ -13,7 +13,7 @@ using namespace PCRM;
 /*****************************************************/
 Data *MyProcess(Person &person, Group &group) {
     std::cout<<"---------- Doing MyProcess with Person & Group -------------- "<<std::endl;
-    // SomeProcess(person, group);
+    //Some Process (calulation) with person & group here
 	Knowledge *k = new Knowledge();
 	Data *data = k;
 	return data;
@@ -22,7 +22,6 @@ Data *MyProcess(Person &person, Group &group) {
 int test_process() {
     std::cout<<"------------------------------------- STARTING TEST PROCESS...\n"<<std::endl;
 
-	/*****************************************************/
 	//Testing initializing
     std::cout<<"Initializing Person(s) Type B"<<std::endl;
 	// Type B

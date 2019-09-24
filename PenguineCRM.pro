@@ -1,5 +1,6 @@
 TEMPLATE = app
 CONFIG += console c++11
+CONFIG += thread
 CONFIG -= app_bundle
 CONFIG -= qt
 
@@ -33,9 +34,5 @@ HEADERS += \
     List.h \
     People.h \
     Person.h \
-    2 \
-    2 \
-    2 \
-    2 \
     Test_basic.h \
     Test_process.h
