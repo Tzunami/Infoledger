@@ -6,7 +6,6 @@ CONFIG -= qt
 SOURCES += \
         Data.cpp \
         Database.cpp \
-        Department.cpp \
         EW_Error.cpp \
         Group.cpp \
         ID.cpp \
@@ -24,7 +23,6 @@ DISTFILES +=
 HEADERS += \
     Data.h \
     Database.h \
-    Department.h \
     EW.h \
     EW_Error.h \
     Group.h \

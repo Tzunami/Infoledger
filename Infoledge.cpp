@@ -13,7 +13,7 @@ namespace EW {
 
 Infoledge::Infoledge() {
 	person = 0;
-	department = 0;
+    group = 0;
 	process = 0;
 	//next = 0;
 	previous = 0;
@@ -25,28 +25,28 @@ Infoledge::Infoledge(Infoledge *i) {
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
-Infoledge::Infoledge(Person &p, Department &g) {
+Infoledge::Infoledge(Person &p, Group &g) {
 	try{
 			if(&p==0||&g==0) throw EW_Error("Infoledge Constructor Failed");
 		}
 	catch(EW_Error &e) {e.PrintError();}
 
 	person = &p;
-	department = &g;
+    group = &g;
 	process = 0;
 	//next = 0;
 	previous = 0;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
-Infoledge::Infoledge(Person &p, Department &g, Process e) {
+Infoledge::Infoledge(Person &p, Group &g, Process e) {
 	try{
 			if(&p==0||&g==0) throw EW_Error("Infoledge Constructor Failed");
 		}
 	catch(EW_Error &e) {e.PrintError();}
 
 	person = &p;
-	department = &g;
+    group = &g;
 	process = e;
 	//next = 0;
 	previous = 0;
@@ -57,7 +57,7 @@ void Infoledge::Print() {
 	std::cout<<"Person:"<<std::endl;
 	person->Print();
 	std::cout<<"Group:"<<std::endl;
-	department->Print();
+    group->Print();
 	data.Print();
 	if(previous!=0) {
 		std::cout<<"------------ Previous:"<<std::endl;

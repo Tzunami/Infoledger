@@ -10,7 +10,7 @@
 
 using namespace EW;
 
-int main() {
+int main_test() {
 	std::cout << "STARTING...\n" << std::endl;
 	/*****************************************************/
 	//Testing initializing

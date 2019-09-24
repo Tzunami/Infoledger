@@ -81,15 +81,15 @@ int main() {
 
 	std::cout << "\nGroup group_1(alice, mary, Group One);" << std::endl;
 	Group group_1(alice, mary, "Group One");
-	group_1.Department::Print();
+    group_1.Print();
 
 	std::cout << "\nGroup group_2(sally, sam, Group Two);" << std::endl;
 	Group group_2(sally, sam, "Group Two");
-	group_2.Department::Print();
+    group_2.Print();
 
 	std::cout << "\nGroup group_3(bob, frank, Group Three);" << std::endl;
 	Group group_3(bob, frank, "Group Three");
-	group_3.Department::Print();
+    group_3.Print();
 
 	/*****************************************************
 	std::cout << "\nGroup & Person" << std::endl;
