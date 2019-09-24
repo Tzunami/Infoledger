@@ -11,7 +11,7 @@
 #include "Person.h"
 #include "List.h"
 
-namespace EW {
+namespace PCRM {
 class Person;
 /****************************************************************/
 class People: public List<Person> {
@@ -37,5 +37,5 @@ public:
 	People &operator-=(People *p){List<Person>::operator-=(p); return *this;}
 };
 /****************************************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 #endif /* PEOPLE_H_ */

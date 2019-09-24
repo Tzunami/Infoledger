@@ -7,10 +7,10 @@
 
 #include "Data.h"
 
-namespace EW {
+namespace PCRM {
 /*******************************/
 Data::Data(){
 	//std::cout<<"Data Constructor"<<std::endl;
 }
 /*******************************/
-} /* namespace EW_Data */
+} /* namespace PCRM_Data */

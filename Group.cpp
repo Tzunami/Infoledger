@@ -7,7 +7,7 @@
 
 #include "Group.h"
 
-namespace EW {
+namespace PCRM {
 /*********************************************************/
 Group::Group() {
 	//std::cout<<"Group Constructor"<<std::endl;
@@ -17,4 +17,4 @@ Group::~Group() {
 	//std::cout<<"Group Destructor"<<std::endl;
 }
 /*********************************************************/
-} /* namespace EW */
+} /* namespace PCRM */

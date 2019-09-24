@@ -9,7 +9,7 @@
 #define DATA_H_
 #include <iostream>
 
-namespace EW {
+namespace PCRM {
 /************************************/
 class Data {
 public:
@@ -19,5 +19,5 @@ public:
 	virtual void Print() {std::cout<<"Data Printing"<<std::endl;}
 };
 /************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 #endif /* DATA_H_ */

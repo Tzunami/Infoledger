@@ -7,9 +7,9 @@
 
 #include "Infoledge.h"
 #include "Data.h"
-#include "EW_Error.h"
+#include "PCRM_Error.h"
 
-namespace EW {
+namespace PCRM {
 
 Infoledge::Infoledge() {
 	person = 0;
@@ -27,9 +27,9 @@ Infoledge::Infoledge(Infoledge *i) {
 /*************************************************/
 Infoledge::Infoledge(Person &p, Department &g) {
 	try{
-			if(&p==0||&g==0) throw EW_Error("Infoledge Constructor Failed");
+			if(&p==0||&g==0) throw PCRM_Error("Infoledge Constructor Failed");
 		}
-	catch(EW_Error &e) {e.PrintError();}
+	catch(PCRM_Error &e) {e.PrintError();}
 
 	person = &p;
 	department = &g;
@@ -41,9 +41,9 @@ Infoledge::Infoledge(Person &p, Department &g) {
 /*************************************************/
 Infoledge::Infoledge(Person &p, Department &g, Process e) {
 	try{
-			if(&p==0||&g==0) throw EW_Error("Infoledge Constructor Failed");
+			if(&p==0||&g==0) throw PCRM_Error("Infoledge Constructor Failed");
 		}
-	catch(EW_Error &e) {e.PrintError();}
+	catch(PCRM_Error &e) {e.PrintError();}
 
 	person = &p;
 	department = &g;

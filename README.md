@@ -1,1 +1,1 @@
-# PenguineCRM
+# openCRM

@@ -12,7 +12,7 @@
 #include "Person.h"
 #include <string>
 
-namespace EW {
+namespace PCRM {
 class Department;
 /********************************************/
 class Group:  public Department, public List<Department> {
@@ -32,5 +32,5 @@ private:
 	Group();
 };
 /********************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 #endif /* GROUP_H_ */

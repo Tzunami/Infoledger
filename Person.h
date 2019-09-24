@@ -12,7 +12,7 @@
 #include "Data.h"
 #include "People.h"
 
-namespace EW {
+namespace PCRM {
 class People;
 /***************************************/
 class Person: public ID {

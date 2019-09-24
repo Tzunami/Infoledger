@@ -10,7 +10,7 @@
 #include <string>
 
 
-namespace EW {
+namespace PCRM {
 /***************************************************************/
 class ID {
 public:
@@ -25,6 +25,6 @@ public:
 	static unsigned int id_counter;
 };
 /***************************************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 
 #endif /* ID_H_ */

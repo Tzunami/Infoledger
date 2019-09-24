@@ -7,7 +7,7 @@
 
 #include "Knowledge.h"
 
-namespace EW {
+namespace PCRM {
 /****************************************************************/
 Knowledge::Knowledge() {
 	//std::cout<<"Knowledge Constructor"<<std::endl;
@@ -17,4 +17,4 @@ Knowledge::~Knowledge() {
 	//std::cout<<"Knowledge Destructor!!!"<<std::endl;
 }
 /****************************************************************/
-} /* namespace EW */
+} /* namespace PCRM */

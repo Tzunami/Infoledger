@@ -5,10 +5,10 @@
  *      Author: tzunami
  */
 
-#include "EW.h" // The Ethereum Workshop Library
+#include "PenguineCRM.h" // The Ethereum Workshop Library
 #include <iostream> // Library to print to console
 
-using namespace EW;
+using namespace PCRM;
 
 int main() {
 	std::cout << "STARTING...\n" << std::endl;

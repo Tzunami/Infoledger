@@ -12,7 +12,7 @@
 #include "Data.h"
 #include "Department.h"
 
-namespace EW {
+namespace PCRM {
 typedef Data* (*Process)(Person &p, Department &g);
 /**********************************************************/
 class Infoledge {
@@ -36,5 +36,5 @@ public:
 	Infoledge * previous;
 };
 /**********************************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 #endif /* INFOLEDGE_H_ */
