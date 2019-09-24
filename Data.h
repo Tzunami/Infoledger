@@ -7,7 +7,8 @@
 #pragma once
 #ifndef DATA_H_
 #define DATA_H_
-#include <iostream>
+
+#include <iostream> // can remove
 
 namespace PCRM {
 /************************************/
@@ -16,7 +17,9 @@ public:
 	//constructors
 	Data();
 	virtual ~Data(){}
-	virtual void Print() {std::cout<<"Data Printing"<<std::endl;}
+    virtual void Print() {
+        std::cout<<"Data Printing"<<std::endl;
+    }
 };
 /************************************/
 } /* namespace PCRM */

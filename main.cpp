@@ -5,7 +5,7 @@
  *      Author: tzunami
  */
 
-#include "PCRM.h" // The Ethereum Workshop Library
+#include "PCRM.h"
 #include <iostream> // Library to print to console
 
 using namespace PCRM;

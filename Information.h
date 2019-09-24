@@ -7,6 +7,7 @@
 
 #ifndef INFORMATION_H_
 #define INFORMATION_H_
+
 #include "Data.h"
 
 namespace PCRM {

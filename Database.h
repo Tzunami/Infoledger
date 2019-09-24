@@ -7,6 +7,7 @@
 #pragma once
 #ifndef DATABASE_H_
 #define DATABASE_H_
+
 #include "Data.h"
 #include "Infoledge.h"
 #include <vector>
