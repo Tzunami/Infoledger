@@ -12,14 +12,8 @@
 #include "Person.h"
 
 namespace PCRM {
-<<<<<<< HEAD
-class Department;
-/********************************************/
-class Group:  public Department, public List<Department> {
-=======
 /*************************************************************************************/
 class Group: public ID, public People {
->>>>>>> master
 public:
 	//members
 	Data data;
@@ -62,12 +56,7 @@ public:
     Group &operator-=(Group *p){People::operator-=(p); return *this;}
 
 };
-<<<<<<< HEAD
 /********************************************/
 } /* namespace PCRM */
+
 #endif /* GROUP_H_ */
-=======
-/*************************************************************************************/
-} /* namespace PCRM */
-#endif /* Group_H_ */
->>>>>>> master

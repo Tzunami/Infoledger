@@ -5,11 +5,7 @@
  *      Author: tzunami
  */
 
-<<<<<<< HEAD
-#include "PenguineCRM.h" // The Ethereum Workshop Library
-=======
 #include "PCRM.h" // The Ethereum Workshop Library
->>>>>>> master
 #include <iostream> // Library to print to console
 
 using namespace PCRM;

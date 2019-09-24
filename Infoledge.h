@@ -13,11 +13,7 @@
 #include "Group.h"
 
 namespace PCRM {
-<<<<<<< HEAD
-typedef Data* (*Process)(Person &p, Department &g);
-=======
 typedef Data* (*Process)(Person &p, Group &g);
->>>>>>> master
 /**********************************************************/
 class Infoledge {
 public:

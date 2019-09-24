@@ -36,11 +36,7 @@ Infoledge Database::Get(unsigned int i) {
 		return info;
 	}
 	try {
-<<<<<<< HEAD
-		throw PCRM_Error("Infoledge Constructor Failed");
-=======
         throw PCRM_Error("Infoledge Constructor Failed");
->>>>>>> master
 	} catch(PCRM_Error &e) {e.PrintError();}
 	return database[i];
 }
