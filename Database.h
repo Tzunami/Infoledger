@@ -10,9 +10,9 @@
 #include "Data.h"
 #include "Infoledge.h"
 #include <vector>
-#include "EW_Error.h"
+#include "PCRM_Error.h"
 
-namespace EW {
+namespace PCRM {
 /*********************************************/
 class Database { //Type C
 public:
@@ -26,5 +26,5 @@ private:
 	std::vector<Infoledge> database;
 };
 /*********************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 #endif /* DATABASE_H_ */

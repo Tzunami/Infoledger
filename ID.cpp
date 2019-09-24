@@ -7,8 +7,8 @@
 
 #include "ID.h"
 
-namespace EW {
+namespace PCRM {
 /*************************************************/
 unsigned int ID::id_counter=0;
 /*************************************************/
-} /* namespace EW */
+} /* namespace PCRM */

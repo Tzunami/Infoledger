@@ -11,7 +11,7 @@
 #include "People.h"
 #include "Person.h"
 
-namespace EW {
+namespace PCRM {
 /*************************************************************************************/
 class Group: public ID, public People {
 public:
@@ -57,5 +57,5 @@ public:
 
 };
 /*************************************************************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 #endif /* Group_H_ */

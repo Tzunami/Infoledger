@@ -5,10 +5,10 @@
  *      Author: tzunami
  */
 
-#include "EW.h" // The Ethereum Workshop Library
+#include "PCRM.h" // The Ethereum Workshop Library
 #include <iostream> // Library to print to console
 
-using namespace EW;
+using namespace PCRM;
 
 int main_test() {
 	std::cout << "STARTING...\n" << std::endl;

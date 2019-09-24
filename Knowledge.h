@@ -10,7 +10,7 @@
 
 #include "Data.h"
 
-namespace EW {
+namespace PCRM {
 
 class Knowledge: public Data {
 public:
@@ -19,6 +19,6 @@ public:
 	void Print() {std::cout<<"Knowledge Printing"<<std::endl;}
 };
 
-} /* namespace EW */
+} /* namespace PCRM */
 
 #endif /* KNOWLEDGE_H_ */

@@ -5,10 +5,10 @@
  *      Author: tzunami
  */
 
-#include "EW.h" // The Ethereum Workshop Library
+#include "PCRM.h" // The Ethereum Workshop Library
 #include <iostream> // Library to print to console
 
-using namespace EW;
+using namespace PCRM;
 /*****************************************************/
 Data *MyProcess(Person &b, Group &a) {
 	std::cout<<"---------- Doing My Process -------------- "<<std::endl;

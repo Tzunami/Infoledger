@@ -7,7 +7,7 @@
 
 #include "People.h"
 
-namespace EW {
+namespace PCRM {
 /****************************************************/
 People::People(){
 	//std::cout<<"People Constructor"<<std::endl;
@@ -26,4 +26,4 @@ People::~People(){
 	//std::cout<<"People Deconstructor!!"<<std::endl;
 }
 /********************************************************/
-} /* namespace EW */
+} /* namespace PCRM */

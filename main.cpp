@@ -5,10 +5,10 @@
  *      Author: tzunami
  */
 
-#include "EW.h" // The Ethereum Workshop Library
+#include "PCRM.h" // The Ethereum Workshop Library
 #include <iostream> // Library to print to console
 
-using namespace EW;
+using namespace PCRM;
 
 int main() {
 	std::cout << "STARTING...\n" << std::endl;
@@ -113,7 +113,7 @@ int main() {
 	std::cout << "\ngroup_1 = ppl_3;;" << std::endl;
 	group_1 = ppl_3;
 	group_1.Print();
-	/*****************************************************
+    *****************************************************
 	std::cout << "\nGroup, Person(s), & People" << std::endl;
 
 	std::cout << "\ngroup_1 += sam + bob;" << std::endl;
@@ -166,11 +166,11 @@ int main() {
 	std::cout << "\ngroup_1 -= group_2 - bob - alice;" << std::endl;
 	group_1 -= group_2 - bob - alice;
 	group_1.Print();
-	/*****************************************************
+    *****************************************************
 	std::cout << "\nGroup + Groups" << std::endl;
 	group_3 = group_1 + group_2;
 	group_3.Print();
-	/************************* End ****************************/
+    ************************* End ****************************/
 	std::cout << "\nEND" << std::endl;
 	return 0;
 }

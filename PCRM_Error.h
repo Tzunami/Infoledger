@@ -1,27 +1,27 @@
 /*
- * EWError.h
+ * PCRM_Error.h
  *
  *  Created on: Nov 20, 2015
  *      Author: tzunami
  */
 #pragma once
-#ifndef EW_ERROR_H_
-#define EW_ERROR_H_
+#ifndef PCRM_ERROR_H_
+#define PCRM_ERROR_H_
 
 #include <string>
 
-namespace EW {
+namespace PCRM {
 /*************************************************/
-class EW_Error {
+class PCRM_Error {
 public:
-	virtual ~EW_Error(){}
-	EW_Error(std::string e);
+	virtual ~PCRM_Error(){}
+    PCRM_Error(std::string e) : pcrm_error(e) {}
 	void PrintError() {}
 
 private:
-	std::string ew_error;
+    std::string pcrm_error;
 };
 /*************************************************/
-} /* namespace EW */
+} /* namespace PCRM */
 /*************************************************/
-#endif /* EW_ERROR_H_ */
+#endif /* PCRM_ERROR_H_ */

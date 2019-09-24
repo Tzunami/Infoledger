@@ -6,7 +6,6 @@ CONFIG -= qt
 SOURCES += \
         Data.cpp \
         Database.cpp \
-        EW_Error.cpp \
         Group.cpp \
         ID.cpp \
         Infoledge.cpp \
@@ -23,8 +22,10 @@ DISTFILES +=
 HEADERS += \
     Data.h \
     Database.h \
-    EW.h \
-    EW_Error.h \
+    PCRM.h \
+    PCRM.h \
+    PCRM_Error.h \
+    PCRM_Error.h \
     Group.h \
     ID.h \
     Infoledge.h \

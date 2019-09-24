@@ -7,7 +7,7 @@
 
 #include "Group.h"
 
-namespace EW {
+namespace PCRM {
 /*********************************************************/
 Group::Group() {
     //std::cout<<"Group Constructor"<<std::end;
@@ -19,12 +19,12 @@ Group::Group(Group *g)  {
 }
 /*********************************************************/
 Group::Group(People *pl): People(pl)  {
-	//People::list = pl->list;
+    People::list = pl->list;
     //std::cout<<"Group Constructor"<<std::endl;
 }
 /*********************************************************/
 Group::Group(People &pl): People(pl)  {
-	//People::list = pl->list;
+    People::list = pl.list;
     //std::cout<<"Group Constructor"<<std::endl;
 }
 /*********************************************************/
@@ -48,4 +48,4 @@ Group::~Group() {
     //std::cout<<"Group Destructor!!!"<<std::endl;
 }
 /*********************************************************/
-} /* namespace EW */
+} /* namespace PCRM */

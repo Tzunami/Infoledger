@@ -7,7 +7,7 @@
 
 #include "Information.h"
 
-namespace EW {
+namespace PCRM {
 /**********************************************************/
 Information::Information() {
 	//std::cout<<"Infoledge Constructor"<<std::endl;
@@ -17,4 +17,4 @@ Information::~Information() {
 	//std::cout<<"Infoledge Destructor!!!"<<std::endl;
 }
 /**********************************************************/
-} /* namespace EW */
+} /* namespace PCRM */

@@ -9,7 +9,7 @@
 #define INFORMATION_H_
 #include "Data.h"
 
-namespace EW {
+namespace PCRM {
 
 class Information: public Data {
 public:
@@ -18,6 +18,6 @@ public:
 	void Print() {std::cout<<"Information Printing"<<std::endl;}
 };
 
-} /* namespace EW */
+} /* namespace PCRM */
 
 #endif /* INFORMATION_H_ */

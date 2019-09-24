@@ -7,16 +7,16 @@
 
 #include "Infoledge.h"
 #include "Data.h"
-#include "EW_Error.h"
+#include "PCRM_Error.h"
 
-namespace EW {
+namespace PCRM {
 
 Infoledge::Infoledge() {
-	person = 0;
-    group = 0;
-	process = 0;
-	//next = 0;
-	previous = 0;
+    person = nullptr;
+    group = nullptr;
+    process = nullptr;
+    //next = nullptr;
+    previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
@@ -27,29 +27,29 @@ Infoledge::Infoledge(Infoledge *i) {
 /*************************************************/
 Infoledge::Infoledge(Person &p, Group &g) {
 	try{
-			if(&p==0||&g==0) throw EW_Error("Infoledge Constructor Failed");
+            if(p.data==nullptr||g.name=="") throw PCRM_Error("Infoledge Constructor Failed");
 		}
-	catch(EW_Error &e) {e.PrintError();}
+	catch(PCRM_Error &e) {e.PrintError();}
 
 	person = &p;
     group = &g;
-	process = 0;
-	//next = 0;
-	previous = 0;
+    process = nullptr;
+    //next = nullptr;
+    previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
 Infoledge::Infoledge(Person &p, Group &g, Process e) {
 	try{
-			if(&p==0||&g==0) throw EW_Error("Infoledge Constructor Failed");
+            if(p.data==nullptr||g.name=="") throw PCRM_Error("Infoledge Constructor Failed");
 		}
-	catch(EW_Error &e) {e.PrintError();}
+	catch(PCRM_Error &e) {e.PrintError();}
 
 	person = &p;
     group = &g;
 	process = e;
-	//next = 0;
-	previous = 0;
+    //next = nullptr;
+    previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
@@ -59,7 +59,7 @@ void Infoledge::Print() {
 	std::cout<<"Group:"<<std::endl;
     group->Print();
 	data.Print();
-	if(previous!=0) {
+    if(previous!=nullptr) {
 		std::cout<<"------------ Previous:"<<std::endl;
 		previous->Print();
 	}

@@ -6,15 +6,15 @@
  */
 /********************************************************/
 #include "Person.h"
-#include "EW_Error.h"
+#include "PCRM_Error.h"
 /********************************************************/
-namespace EW {
+namespace PCRM {
 /********************************************************/
-Person::Person(): data(0) {
+Person::Person(): data(nullptr) {
 	//std::cout<<"Person Constructor"<<std::endl;
 }
 /********************************************************/
-Person::Person(std::string n): data(0) {
+Person::Person(std::string n): data(nullptr) {
 	name = n;
 	//std::cout<<"Person Constructor, Name: "<<name<<std::endl;
 }
@@ -34,5 +34,5 @@ void Person::Print() {
 	std::cout<<"Name: "<<name<<" ID: "<<id<<std::endl;
 }
 /********************************************************/
-} /* namespace EW_Person */
+} /* namespace PCRM_Person */
 /********************************************************/

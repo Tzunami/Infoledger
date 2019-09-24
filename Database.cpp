@@ -7,7 +7,7 @@
 
 #include "Database.h"
 
-namespace EW {
+namespace PCRM {
 
 Database::Database() {
 	//std::cout<<"Database Constructor"<<std::endl;
@@ -36,8 +36,8 @@ Infoledge Database::Get(unsigned int i) {
 		return info;
 	}
 	try {
-		throw EW_Error("Infoledge Constructor Failed");
-	} catch(EW_Error &e) {e.PrintError();}
+        throw PCRM_Error("Infoledge Constructor Failed");
+	} catch(PCRM_Error &e) {e.PrintError();}
 	return database[i];
 }
 /*************************************************/
@@ -46,4 +46,4 @@ void Database::Print() {
 		database[i].Print();
 }
 /*************************************************/
-} /* namespace EW */
+} /* namespace PCRM */
