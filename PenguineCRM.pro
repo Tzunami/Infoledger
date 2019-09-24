@@ -17,7 +17,8 @@ SOURCES += \
         testing.cpp \
         testing2.cpp
 
-DISTFILES +=
+DISTFILES += \
+    README.md
 
 HEADERS += \
     Data.h \
