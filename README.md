@@ -5,7 +5,7 @@ This is an open-source CRM I wrote many years ago and thought I lost when my dri
 
 # What is PenguineCRM ? It's CRM Math
 What is CRM Math? We will look at examples in the CRM Math Section.<br/>
-But before we start need to understand a few Principles.<br/>
+But before we start we need to understand a few Principles.<br/>
 
 # Principles
 A Person and a Person are People<br/>
