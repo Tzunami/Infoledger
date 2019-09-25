@@ -72,6 +72,7 @@ template <class T>
 List<T> &List<T>::operator+(List<T> &p) {
 	List<T>* pl = new List<T>();
 	*pl = *this;
+    // need to check for duplicates // BUG
 	pl->list.insert(pl->list.end(),p.list.begin(),p.list.end());
 	return *pl;
 }
@@ -99,6 +100,7 @@ List<T> &List<T>::operator-(List<T> &p) {
 /********************************************/
 template <class T>
 List<T> &List<T>::operator+=(List<T> *p) {
+    // need to check for duplicates // BUG
 	list.insert(list.end(),p->list.begin(),p->list.end());
 	delete p;
 	return *this;
