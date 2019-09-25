@@ -73,7 +73,7 @@ List<T> &List<T>::operator+(List<T> &p) {
 	List<T>* pl = new List<T>();
 	*pl = *this;
     // need to check for duplicates // BUG
-	pl->list.insert(pl->list.end(),p.list.begin(),p.list.end());
+    pl->list.insert(pl->list.end(), p.list.begin(), p.list.end());
 	return *pl;
 }
 /********************************************/
@@ -82,7 +82,7 @@ List<T> &List<T>::operator-(T &p) {
 	unsigned int found = Find(p);
 	List<T>* pl = new List<T>();
 	*pl = *this;
-	if(found--) pl->list.erase(pl->list.begin()+ found);
+    if(found--) pl->list.erase(pl->list.begin() + found);
 	return *pl;
 }
 /********************************************/
@@ -93,7 +93,7 @@ List<T> &List<T>::operator-(List<T> &p) {
 
 	for(unsigned int found, j=0; j<pl->list.size(); j++) {
 		found = p.Find(pl->list[j]);
-		if(found--)pl->list.erase(pl->list.begin()+ j);
+        if(found--) pl->list.erase(pl->list.begin()+ j);
 	}//end for
 	return *pl;
 }
@@ -101,14 +101,14 @@ List<T> &List<T>::operator-(List<T> &p) {
 template <class T>
 List<T> &List<T>::operator+=(List<T> *p) {
     // need to check for duplicates // BUG
-	list.insert(list.end(),p->list.begin(),p->list.end());
+    list.insert(list.end(), p->list.begin(), p->list.end());
 	delete p;
 	return *this;
 }
 /********************************************/
 template <class T>
 List<T> &List<T>::operator+=(List<T> &p) {
-	list.insert(list.end(),p.list.begin(),p.list.end());
+    list.insert(list.end(), p.list.begin(), p.list.end());
 	return *this;
 }
 /********************************************/
