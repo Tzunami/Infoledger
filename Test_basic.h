@@ -122,7 +122,7 @@ int test_basic() {
 	group_1.Print();
 
 	std::cout << "\ngroup_1 -= sam + bob;" << std::endl;
-	group_1 -= sam + bob;
+    group_1 -= sam + bob;
 	group_1.Print();
 
 	std::cout << "\ngroup_1 = group_1 + pl_1 + sam - mary;" << std::endl;
@@ -144,7 +144,7 @@ int test_basic() {
 	ppl_1.Print();
 
 	std::cout << "\ngroup_1 -= bob + frank;" << std::endl;
-	group_1 -= bob + frank;
+    group_1 -= bob + frank;
 	group_1.Print();
 	std::cout << "\nppl_1" << std::endl;
 	ppl_1.Print();

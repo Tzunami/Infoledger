@@ -11,6 +11,7 @@
 #include "Person.h"
 #include "Data.h"
 #include "Group.h"
+#include "PCRM_Error.h"
 
 namespace PCRM {
 typedef Data* (*Process)(Person &p, Group &g);

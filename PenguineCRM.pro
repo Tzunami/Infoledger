@@ -12,7 +12,7 @@ SOURCES += \
         Infoledge.cpp \
         Information.cpp \
         Knowledge.cpp \
-        People.cpp \
+        List.cpp \
         Person.cpp \
         main.cpp
 
@@ -32,7 +32,6 @@ HEADERS += \
     Information.h \
     Knowledge.h \
     List.h \
-    People.h \
     Person.h \
     Test_basic.h \
     Test_process.h

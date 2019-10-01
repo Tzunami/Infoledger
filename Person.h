@@ -8,19 +8,23 @@
 #ifndef PERSON_H_
 #define PERSON_H_
 
+
 #include "ID.h"
 #include "Data.h"
-#include "People.h"
+#include "List.h"
+#include "PCRM_Error.h"
+
+#define People List<Person>
 
 namespace PCRM {
-class People;
+
 /***************************************/
 class Person: public ID {
 public:
 	Data *data;
 	// constructor
 	Person();
-	Person(std::string n);
+    Person(std::string n);
 	virtual ~Person();
 	//operators
 	People &operator+(Person &p) const;

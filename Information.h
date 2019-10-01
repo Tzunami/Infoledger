@@ -4,7 +4,7 @@
  *  Created on: Dec 4, 2015
  *      Author: tzunami
  */
-
+#pragma once
 #ifndef INFORMATION_H_
 #define INFORMATION_H_
 

@@ -6,8 +6,6 @@
  */
 
 #include "Infoledge.h"
-#include "Data.h"
-#include "PCRM_Error.h"
 
 namespace PCRM {
 

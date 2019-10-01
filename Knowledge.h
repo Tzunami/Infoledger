@@ -5,6 +5,7 @@
  *      Author: tzunami
  */
 
+#pragma once
 #ifndef KNOWLEDGE_H_
 #define KNOWLEDGE_H_
 

@@ -10,19 +10,21 @@
 
 #include <string>
 
+
+
 namespace PCRM {
 /***************************************************************/
 class ID {
 public:
-	ID(): name(""), id(++id_counter) {}
-	ID(std::string &n): name(n), id(++id_counter) {}
+    ID(): name(""), id(++id_counter) {}
+    ID(std::string &n): name(n), id(++id_counter) {}
 	ID(std::string &n, unsigned int &my_id): name(n), id(my_id) {}
 	virtual ~ID(){}
 	//members
 	std::string name;
 	unsigned int id;
 
-	static unsigned int id_counter;
+    static unsigned int id_counter;
 };
 /***************************************************************/
 } /* namespace PCRM */
