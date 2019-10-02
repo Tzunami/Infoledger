@@ -92,7 +92,7 @@ int test_basic() {
 	Group group_3(bob, frank, "Group Three");
 	group_3.Print();
 
-	/*****************************************************/
+    /*****************************************************/
 	std::cout << "\nGroup & Person" << std::endl;
 
 	std::cout << "\ngroup_1 = group_1 + bob;" << std::endl;
@@ -114,7 +114,7 @@ int test_basic() {
 	std::cout << "\ngroup_1 = ppl_3;;" << std::endl;
 	group_1 = ppl_3;
 	group_1.Print();
-	/*****************************************************/
+    /*****************************************************/
 	std::cout << "\nGroup, Person(s), & People" << std::endl;
 
 	std::cout << "\ngroup_1 += sam + bob;" << std::endl;

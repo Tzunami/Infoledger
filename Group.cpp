@@ -13,11 +13,6 @@ Group::Group(): People() {
     //std::cout<<"Group Constructor"<<std::end;
 	}
 /*********************************************************/
-Group::Group(Group *g)  {
-	*this=*g;
-    //std::cout<<"Group Constructor"<<std::endl;
-}
-/*********************************************************/
 Group::Group(People *pl) {
     People::list = pl->list;
     //std::cout<<"Group Constructor"<<std::endl;
@@ -47,16 +42,17 @@ Group::~Group() {
 }
 //operators Person
 /*********************************************************/
-Group &Group::operator+(Person &p) {
+Group &Group::operator+(Person &p)
+{
     People *pl=&People::operator+(p);
-    Group *mygroup=new Group(pl);
-    return *mygroup;
+    Group *group=new Group(pl);
+    return *group;
 }
 /*********************************************************/
 Group &Group::operator-(Person &p) {
     People *pl=&People::operator-(p);
-    Group *mygroup=new Group(pl);
-    return *mygroup;
+    Group *group=new Group(pl);
+    return *group;
 }
 //operators People Equal
 /*********************************************************/
@@ -85,39 +81,76 @@ Group &Group::operator=(People *p) {
 /*********************************************************/
 Group &Group::operator+(People &p) {
     People *pl=&People::operator+(p);
-    Group* mygroup=new Group(pl);
-    return *mygroup;
+    Group* group=new Group(pl);
+    return *group;
 }
 /*********************************************************/
 Group &Group::operator-(People &p) {
     People *pl=&People::operator-(p);
-    Group* mygroup=new Group(pl);
-    return *mygroup;
+    Group* group=new Group(pl);
+    return *group;
 }
 /*********************************************************/
-Group &Group::operator+=(People &p){People::operator+=(p); return *this;}
+Group &Group::operator+=(People &p){
+    People::operator+=(p);
+    return *this;
+}
 /*********************************************************/
-Group &Group::operator+=(People *p){People::operator+=(p); return *this;}
+Group &Group::operator+=(People *p){
+    People::operator+=(p);
+    return *this;
+}
 /*********************************************************/
-//Group &Group::operator-=(People &p){People::operator-=(p); return *this;}
+Group &Group::operator-=(People &p){
+    People::operator-=(p);
+    return *this;
+}
 /*********************************************************/
-Group &Group::operator-=(People *p){People::operator-=(p); return *this;}
+Group &Group::operator-=(People *p){
+    People::operator-=(p);
+    return *this;
+}
 /*********************************************************/
 //operators Group
-Group &Group::operator=(Group &g) {People::operator=(g); return *this;}
+Group &Group::operator=(Group &g) {
+    People::operator=(g);
+    return *this;
+}
 /*********************************************************/
-Group &Group::operator=(Group *g) {People::operator=(g); return *this;}
+Group &Group::operator=(Group *g) {
+    People::operator=(g);
+    return *this;
+}
 /*********************************************************/
-Group &Group::operator+(Group &g) {People *pl=&People::operator+(g
-/*********************************************************/                                                          ); Group* mygroup=new Group(pl); return *mygroup;}
-Group &Group::operator-(Group &g) {People *pl=&People::operator-(g); Group* mygroup=new Group(pl); return *mygroup;}
+Group &Group::operator+(Group &g) {
+    People *pl=&People::operator+(g);
+    Group* group=new Group(pl);
+    return *group;
+}
 /*********************************************************/
-Group &Group::operator+=(Group &g){People::operator+=(g); return *this;}
+Group &Group::operator-(Group &g) {
+    People *pl=&People::operator-(g);
+    Group* group=new Group(pl);
+    return *group;
+}
 /*********************************************************/
-Group &Group::operator+=(Group *g){People::operator+=(g); return *this;}
+Group &Group::operator+=(Group &g){
+    People::operator+=(g);
+    return *this;}
 /*********************************************************/
-Group &Group::operator-=(Group &g){People::operator-=(g); return *this;}
+Group &Group::operator+=(Group *g){
+    People::operator+=(g);
+    return *this;
+}
 /*********************************************************/
-Group &Group::operator-=(Group *g){People::operator-=(g); return *this;}
+Group &Group::operator-=(Group &g){
+    People::operator-=(g);
+    return *this;
+}
+/*********************************************************/
+Group &Group::operator-=(Group *g){
+    People::operator-=(g);
+    return *this;
+}
 /*********************************************************/
 } /* namespace PCRM */

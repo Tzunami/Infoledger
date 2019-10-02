@@ -12,7 +12,6 @@ SOURCES += \
         Infoledge.cpp \
         Information.cpp \
         Knowledge.cpp \
-        List.cpp \
         Person.cpp \
         main.cpp
 

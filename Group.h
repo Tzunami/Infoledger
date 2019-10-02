@@ -18,7 +18,6 @@ public:
 	Data data;
 	//constructors
     Group();
-    Group(Group *g);
     Group(People *pl);
     Group(People &pl);
     Group(Person &p1, Person &p2);
@@ -37,7 +36,7 @@ public:
     Group &operator-(People &p);
     Group &operator+=(People &p);
     Group &operator+=(People *p);
-    //Group &operator-=(People &p);
+    Group &operator-=(People &p);
     Group &operator-=(People *p);
     //operators Group
     Group &operator=(Group &g);
