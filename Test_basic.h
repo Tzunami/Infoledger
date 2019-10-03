@@ -8,6 +8,7 @@
 
 #include "PCRM.h"
 #include <iostream> // Library to print to console
+#include <stdarg.h>
 
 using namespace PCRM;
 
@@ -16,7 +17,7 @@ void addNewData(People& p) {
     unsigned int elm;
     for(auto& person : p.list) {
         elm = rand() % 4;
-        person.data = new Knowledge(career[elm]);
+        person->data = new Knowledge(career[elm]);
     }
 }
 
@@ -34,17 +35,17 @@ int test_basic() {
 	Person mary("Mary");
 	Person sally("Sally");
 	/*****************************************************/
-	// Person & People
+    // Person & People
     People ppl_1 = bob + frank + sam + alice;
-    addNewData(ppl_1);
+    //addNewData(ppl_1);
     People ppl_2 = sally + alice + mary;
-    ppl_2.Print();
-	People ppl_3 = ppl_1 + ppl_2;    
+    //ppl_2.Print();
+    People ppl_3 = ppl_1 + ppl_2;
     //addNewData(ppl_3); addNewData(ppl_3);
 
 	std::cout << "\nPeople ppl_1 = bob + frank + sam + alice;" << std::endl;
 	ppl_1.Print();
-	std::cout << "\nPeople ppl_2 = sally + alice + mary;" << std::endl;
+    std::cout << "\nPeople ppl_2 = sally + alice + mary;" << std::endl;
 	ppl_2.Print();
 	std::cout << "\nPeople ppl_3 = ppl_1 + ppl_2;" << std::endl;
 	ppl_3.Print();
@@ -82,14 +83,14 @@ int test_basic() {
 	ppl_2.Print();
 	std::cout << "\nppl_1" << std::endl;
 	ppl_1.Print();
-	/*****************************************************/
+    /*****************************************************/
 	std::cout << "\nPeople" << std::endl;
 
 	std::cout << "\nppl_3 = ppl_1 - ppl_2" << std::endl;
 	ppl_3 = ppl_1 - ppl_2;
 	ppl_3.Print();
 
-	/*****************************************************/
+    /*****************************************************/
 	std::cout << "\nInitialize Group (Requires 2 Person(s))" << std::endl;
 
 	std::cout << "\nGroup group_1(alice, mary, Group One);" << std::endl;
