@@ -36,11 +36,7 @@ int test_basic() {
 	Person sally("Sally");
 	/*****************************************************/
     // Person & People
-<<<<<<< HEAD
     People ppl_1 = bob + frank + sam + alice;
-=======
-    People ppl_1 = bob + frank;// + sam + alice;
->>>>>>> 454a51456c18eafe0ad30a7f28558b52767dae26
     //addNewData(ppl_1);
     People ppl_2 = sally + alice + mary;
     //ppl_2.Print();
