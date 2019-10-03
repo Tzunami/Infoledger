@@ -37,16 +37,17 @@ int test_basic() {
 	/*****************************************************/
     // Person & People
     People ppl_1 = bob + frank + sam + alice;
-    //addNewData(ppl_1);
-    People ppl_2 = sally + alice + mary;
-    //ppl_2.Print();
-    People ppl_3 = ppl_1 + ppl_2;
-    //addNewData(ppl_3); addNewData(ppl_3);
+    addNewData(ppl_1);
+    std::cout << "\nPeople ppl_1 = bob + frank + sam + alice;" << std::endl;
+    ppl_1.Print();
 
-	std::cout << "\nPeople ppl_1 = bob + frank + sam + alice;" << std::endl;
-	ppl_1.Print();
+    People ppl_2 = sally + alice + mary;
+    addNewData(ppl_2);
     std::cout << "\nPeople ppl_2 = sally + alice + mary;" << std::endl;
-	ppl_2.Print();
+    ppl_2.Print();
+
+    People ppl_3 = ppl_1 + ppl_2;
+    addNewData(ppl_3);
 	std::cout << "\nPeople ppl_3 = ppl_1 + ppl_2;" << std::endl;
 	ppl_3.Print();
 
