@@ -48,14 +48,9 @@ public:
 	void Print();
 
 protected:
-    unsigned int Remove(T &p);
-    unsigned int Remove(T *p);
-    //unsigned int Remove(List<T> &p);
-    //unsigned int Remove(List<T> *p);
-    void RemoveDuplicate(T &p);
+    unsigned int GetDuplicate(T &p) const;
+    void RemoveDuplicate(const T &p);
     void RemoveDuplicate(List<T> &p);
-    void RemoveDuplicate(List<T> *p);
-
 };
 
 /******************************** cpp ********************************/
@@ -68,16 +63,17 @@ List<T>::List(T t) { list.push_back(t); }
 /********************************************/
 template <class T>
 List<T> &List<T>::operator+(T &p) {
+    unsigned int duplicate = GetDuplicate(p);
     List<T>* pl = new List<T>();
     *pl = *this;
-    RemoveDuplicate(p);
+    if(duplicate) return *pl;
     pl->list.push_back(p);
     return *pl;
 }
 /********************************************/
 template <class T>
 List<T> &List<T>::operator-(T &p) {
-    unsigned int remove = Remove(p);
+    unsigned int remove = GetDuplicate(p);
     List<T>* pl = new List<T>();
     *pl = *this;
     if(remove--) pl->list.erase(pl->list.begin() + remove);
@@ -86,23 +82,24 @@ List<T> &List<T>::operator-(T &p) {
 /********************************************/
 template <class T>
 List<T> &List<T>::operator+=(T &p) {
-    RemoveDuplicate(p);
+    unsigned int duplicate = GetDuplicate(p);
+    if(duplicate) return *this;
     list.push_back(p);
     return *this;
 }
 /********************************************/
 template <class T>
 List<T> &List<T>::operator-=(T &p) {
-    unsigned int remove = Remove(p);
-    if(remove--)	list.erase(list.begin() + remove);
+    unsigned int remove = GetDuplicate(p);
+    if(remove--) list.erase(list.begin() + remove);
     return *this;
 }
 //operators List<T>
 /********************************************/
 template <class T>
 List<T> &List<T>::operator=(List<T> *p) {
+    delete this;
     *this = *p;
-    delete p;
     return *this;
 }
 /********************************************/
@@ -117,7 +114,7 @@ template <class T>
 List<T> &List<T>::operator+(List<T> &p) {
     List<T>* pl = new List<T>();
     *pl = *this;
-    RemoveDuplicate(p);
+    pl->RemoveDuplicate(p);
     pl->list.insert(pl->list.end(), p.list.begin(), p.list.end());
     return *pl;
 }
@@ -125,16 +122,15 @@ List<T> &List<T>::operator+(List<T> &p) {
 /********************************************/
 template <class T>
 List<T> &List<T>::operator-(List<T> &p) {
-    unsigned int remove = Remove(p);
     List<T>* pl = new List<T>();
     *pl = *this;
-    if(remove--) pl->list.erase(pl->list.begin() + remove);
+    pl->RemoveDuplicate(p);
     return *pl;
 }
 /********************************************/
 template <class T>
 List<T> &List<T>::operator+=(List<T> *p) {
-    RemoveDuplicate(p);
+    RemoveDuplicate(*p);
     this->list.insert(this->list.end(), p->list.begin(), p->list.end());
     return *this;
 }
@@ -149,66 +145,32 @@ List<T> &List<T>::operator+=(List<T> &p) {
 /********************************************/
 template <class T>
 List<T> &List<T>::operator-=(List<T> *p) {
-    unsigned int remove = Remove(p);
-    if(remove--)	list.erase(list.begin() + remove);
+    RemoveDuplicate(*p);
     return *this;
 }
 /********************************************/
 template <class T>
 List<T> &List<T>::operator-=(List<T> &p) {
-    unsigned int remove = Remove(p);
-    if(remove--)	list.erase(list.begin() + remove);
+    RemoveDuplicate(p);
     return *this;
 }
 /********************************************/
 template <class T>
-unsigned int List<T>::Remove(T &p) {
-    for(unsigned int i=0; i<list.size(); i++)
-        if(list[i].name==p.name && list[i].id==p.id)
+unsigned int List<T>::GetDuplicate(T &p) const {
+    for(unsigned int i=0; i<this->list.size(); i++)
+        if(list[i]==p)
             return ++i;
     return 0;
-}
-/********************************************/
-template <class T>
-unsigned int List<T>::Remove(T *p) {
-    for(unsigned int i=0; i<list.size(); i++)
-        if(list[i].name==p->name && list[i]->id==p->id) // WRONG !!!!!
-            return ++i;
-    return 0;
-}
-/********************************************/
-template <class T>
-void List<T>::Remove(List<T> &p) {
-    for(unsigned int j=0; j<this->list.size(); j++)
-        Remove(p.list[j]);
-}
-/********************************************/
-template <class T>
-void List<T>::Remove(List<T> *p) {
-    for(unsigned int j=0; j<this->list.size(); j++)
-        Remove(p->list[j]);
-}
-/********************************************/
-template <class T>
-void List<T>::RemoveDuplicate(T& p) {
-    for(unsigned int remove, j=0; j<this->list.size(); j++) {
-        remove = Remove(p);
-        if(remove--) {
-            this->list.erase(this->list.begin()+ j);
-        }
-    }//end for
 }
 /********************************************/
 template <class T>
 void List<T>::RemoveDuplicate(List<T> &p) {
-    for(unsigned int j=0; j<this->list.size(); j++)
-        RemoveDuplicate(p.list[j]);
-}
-/********************************************/
-template <class T>
-void List<T>::RemoveDuplicate(List<T> *p) {
-    for(unsigned int j=0; j<this->list.size(); j++)
-        RemoveDuplicate(p->list[j]);
+    for(unsigned int x=0; x<this->list.size(); x++)
+        for(unsigned int y=0; y<p.list.size(); y++)
+            if(this->list[x] == p.list[y]) {
+                this->list.erase(this->list.begin() + x);
+                if(x>=this->list.size()) return;
+            }
 }
 /**************************************************/
 template <class T>

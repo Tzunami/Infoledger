@@ -20,9 +20,9 @@ public:
 	Database();
 	Database(Database *db);
 	virtual ~Database();
-	void Save(Data *result, Infoledge &i);
+    void Save(Data *result, Infoledge &i);
 	Infoledge Get(unsigned int i);
-	void Print();
+    void Print();
 private:
 	std::vector<Infoledge> database;
 };

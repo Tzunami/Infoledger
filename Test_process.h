@@ -73,9 +73,9 @@ int test_process() {
 	Infoledge il_1(pat, group_A);
 	il_1.Print();
 
-	std::cout<<"\nInfoledge il_2(frank, group_B, *pdata, process);"<<std::endl;
+    std::cout<<"\nInfoledge il_2(frank, group_B, process);"<<std::endl;
 	Infoledge il_2(frank, group_B, process);
-	std::cout<<"\n*pdata = il_2.RunProcess()"<<std::endl;
+    std::cout<<"\nprocess = il_2.RunProcess()"<<std::endl;
 	pdata = il_2.RunProcess();
 	il_2.Print();
 	std::cout<<"\npdata->Print();"<<std::endl;

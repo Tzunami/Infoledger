@@ -29,6 +29,13 @@ People &Person::operator+(Person &p) const {
 	return *people;
 }
 /********************************************************/
+bool Person::operator==(Person &p) const {
+    if(this->name != p.name) return false;
+    if(this->id   != p.id)   return false;
+    if(this->data != p.data) return false;
+    return true;
+}
+/********************************************************/
 void Person::Print() {
 	std::cout<<"Name: "<<name<<" ID: "<<id<<std::endl;
 }

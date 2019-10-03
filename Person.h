@@ -28,6 +28,7 @@ public:
 	virtual ~Person();
 	//operators
 	People &operator+(Person &p) const;
+    bool operator==(Person &p) const;
 	void Print();
 };
 /*********************************************/
