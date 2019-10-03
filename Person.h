@@ -27,8 +27,8 @@ public:
     Person(std::string n, Data* d);
     virtual ~Person() {}
 	//operators
-	People &operator+(Person &p) const;
     bool operator==(Person &p) const;
+    People &operator+(Person &p) ;
 	void Print();
 };
 /*********************************************/

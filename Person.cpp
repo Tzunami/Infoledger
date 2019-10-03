@@ -17,18 +17,18 @@ Person::Person(std::string n, Data* d): ID(n), data(d) {
     //std::cout<<"Person Constructor"<<std::endl;
 }
 /********************************************************/
-People &Person::operator+(Person &p) const {
-    if(*this==*&p) return *this;
-    People* people = new People(*this);
-	people->list.push_back(p);
-	return *people;
-}
-/********************************************************/
 bool Person::operator==(Person &p) const {
     if(this->GetName() != p.GetName()) return false;
     if(this->GetID()   != p.GetID())   return false;
     //if(this->data != p.data) return false;
     return true;
+}
+/********************************************************/
+People &Person::operator+(Person &p) {
+    People* people = new People(*this);
+    if(*this == p) return *people;
+    people->list.push_back(&p);
+    return *people;
 }
 /********************************************************/
 void Person::Print() {

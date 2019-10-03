@@ -24,14 +24,14 @@ Group::Group(People &pl): People(pl)  {
 }
 /*********************************************************/
 Group::Group(Person &p1, Person &p2) {
-	People::list.push_back(p1);
-	People::list.push_back(p2);
+    People::list.push_back(&p1);
+    People::list.push_back(&p2);
     //std::cout<<"Group Constructor"<<std::endl;
 }
 /*********************************************************/
 Group::Group(Person &p1, Person &p2, std::string name): ID(name) {
-	People::list.push_back(p1);
-    People::list.push_back(p2);
+    People::list.push_back(&p1);
+    People::list.push_back(&p2);
     //std::cout<<"Group Constructor"<<std::endl;
 }
 /*********************************************************/

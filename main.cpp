@@ -16,7 +16,7 @@ using namespace PCRM;
 
 int main() {
     test_basic();
-    test_process();
+    //test_process();
 	return 0;
 }
 
