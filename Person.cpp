@@ -17,26 +17,24 @@ Person::Person(std::string n, Data* d): ID(n), data(d) {
     //std::cout<<"Person Constructor"<<std::endl;
 }
 /********************************************************/
-Person::~Person(){
-	//std::cout<<"Person Deconstructor!!!"<<std::endl;
-}
-/********************************************************/
 People &Person::operator+(Person &p) const {
-	People* people = new People();
+    if(*this==*&p) return *this;
+    People* people = new People(*this);
 	people->list.push_back(p);
-	people->list.push_back(*this);
 	return *people;
 }
 /********************************************************/
 bool Person::operator==(Person &p) const {
     if(this->GetName() != p.GetName()) return false;
     if(this->GetID()   != p.GetID())   return false;
-    if(this->data != p.data) return false;
+    //if(this->data != p.data) return false;
     return true;
 }
 /********************************************************/
 void Person::Print() {
-    std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: "<< data << std::endl;
+    std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: ";
+    if(data!=nullptr) data->Print();
+    std::cout << std::endl;
 }
 /********************************************************/
 } /* namespace PCRM_Person */

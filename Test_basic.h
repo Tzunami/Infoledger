@@ -11,6 +11,15 @@
 
 using namespace PCRM;
 
+void addNewData(People& p) {
+    std::string career[] = {"CEO", "Dentist", "Developer", "Doctor"};
+    unsigned int elm;
+    for(auto& person : p.list) {
+        elm = rand() % 4;
+        person.data = new Knowledge(career[elm]);
+    }
+}
+
 int test_basic() {
     std::cout << "STARTING BASIC TEST...\n" << std::endl;
 	/*****************************************************/
@@ -26,9 +35,12 @@ int test_basic() {
 	Person sally("Sally");
 	/*****************************************************/
 	// Person & People
-	People ppl_1 = bob + frank + sam + alice;
-	People ppl_2 = sally + alice + mary;
-	People ppl_3 = ppl_1 + ppl_2;
+    People ppl_1 = bob + frank + sam + alice;
+    addNewData(ppl_1);
+    People ppl_2 = sally + alice + mary;
+    ppl_2.Print();
+	People ppl_3 = ppl_1 + ppl_2;    
+    //addNewData(ppl_3); addNewData(ppl_3);
 
 	std::cout << "\nPeople ppl_1 = bob + frank + sam + alice;" << std::endl;
 	ppl_1.Print();

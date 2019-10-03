@@ -11,12 +11,12 @@
 
 using namespace PCRM;
 /*****************************************************/
-Data *MyProcess(Person &person, Group &group) {
+Data* MyProcess(Person &person, Group &group) {
     std::cout<<"---------- Doing MyProcess with Person & Group -------------- "<<std::endl;
-    //Some Process (calulation) with person & group here
-	Knowledge *k = new Knowledge();
-	Data *data = k;
-	return data;
+    //Some calulation with person & group here
+    Knowledge *k = new Knowledge("Discovery");
+    Data *data = k;
+    return data;
 }
 /*****************************************************/
 int test_process() {
@@ -61,7 +61,7 @@ int test_process() {
 	/*****************************************************/
 	std::cout<<"\nCreating Data, Information, Knowledge, Process, Output "<<std::endl;
 	Information info;
-	Knowledge knowledge;
+    //Knowledge knowledge;
 	Process process = &MyProcess;
 	Data* pdata = &info;
 	Database database;
@@ -76,7 +76,7 @@ int test_process() {
     std::cout<<"\nInfoledge il_2(frank, group_B, process);"<<std::endl;
 	Infoledge il_2(frank, group_B, process);
     std::cout<<"\nprocess = il_2.RunProcess()"<<std::endl;
-	pdata = il_2.RunProcess();
+    pdata = il_2.RunProcess();
 	il_2.Print();
 	std::cout<<"\npdata->Print();"<<std::endl;
 	pdata->Print();

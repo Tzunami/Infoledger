@@ -25,7 +25,7 @@ public:
 	// constructor
     Person(std::string n);
     Person(std::string n, Data* d);
-	virtual ~Person();
+    virtual ~Person() {}
 	//operators
 	People &operator+(Person &p) const;
     bool operator==(Person &p) const;

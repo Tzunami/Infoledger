@@ -9,7 +9,7 @@
 
 namespace PCRM {
 /****************************************************************/
-Knowledge::Knowledge() {
+Knowledge::Knowledge(std::string k): knowledge(k) {
 	//std::cout<<"Knowledge Constructor"<<std::endl;
 }
 /****************************************************************/

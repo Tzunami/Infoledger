@@ -17,7 +17,9 @@ public:
     // truple in the future
 	//constructors
 	Data();
-	virtual ~Data(){}
+    //Data(std::string s);
+    virtual ~Data() {}
+
     virtual void Print() {
         std::cout<<"Data Printing"<<std::endl;
     }

@@ -15,9 +15,11 @@ namespace PCRM {
 
 class Knowledge: public Data {
 public:
-	Knowledge();
+    Knowledge(std::string k);
 	virtual ~Knowledge();
-	void Print() {std::cout<<"Knowledge Printing"<<std::endl;}
+    void Print() { std::cout<<"Knowledge: "<< knowledge; }
+
+    std::string knowledge;
 };
 
 } /* namespace PCRM */
