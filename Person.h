@@ -23,8 +23,8 @@ class Person: public ID {
 public:
 	Data *data;
 	// constructor
-	Person();
     Person(std::string n);
+    Person(std::string n, Data* d);
 	virtual ~Person();
 	//operators
 	People &operator+(Person &p) const;

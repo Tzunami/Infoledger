@@ -16,14 +16,17 @@ namespace PCRM {
 /***************************************************************/
 class ID {
 public:
-    ID(): name(""), id(++id_counter) {}
-    ID(std::string &n): name(n), id(++id_counter) {}
-	ID(std::string &n, unsigned int &my_id): name(n), id(my_id) {}
-	virtual ~ID(){}
-	//members
-	std::string name;
-	unsigned int id;
+    ID(const std::string n): name(n), id(id_counter++) {}
+    virtual ~ID(){}
+    std::string GetName() const {return name;}
+    unsigned int GetID() const {return id;}
 
+protected:
+    ID(): name(""), id(id_counter++) {}
+
+private:
+    std::string name;
+    unsigned int id;
     static unsigned int id_counter;
 };
 /***************************************************************/

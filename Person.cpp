@@ -9,13 +9,12 @@
 
 namespace PCRM {
 /********************************************************/
-Person::Person(): data(nullptr) {
-	//std::cout<<"Person Constructor"<<std::endl;
+Person::Person(std::string n): ID(n), data(nullptr) {
+    //std::cout<<"Person Constructor, Name: "<<name<<std::endl;
 }
 /********************************************************/
-Person::Person(std::string n): data(nullptr) {
-	name = n;
-	//std::cout<<"Person Constructor, Name: "<<name<<std::endl;
+Person::Person(std::string n, Data* d): ID(n), data(d) {
+    //std::cout<<"Person Constructor"<<std::endl;
 }
 /********************************************************/
 Person::~Person(){
@@ -30,14 +29,14 @@ People &Person::operator+(Person &p) const {
 }
 /********************************************************/
 bool Person::operator==(Person &p) const {
-    if(this->name != p.name) return false;
-    if(this->id   != p.id)   return false;
+    if(this->GetName() != p.GetName()) return false;
+    if(this->GetID()   != p.GetID())   return false;
     if(this->data != p.data) return false;
     return true;
 }
 /********************************************************/
 void Person::Print() {
-	std::cout<<"Name: "<<name<<" ID: "<<id<<std::endl;
+    std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: "<< data << std::endl;
 }
 /********************************************************/
 } /* namespace PCRM_Person */

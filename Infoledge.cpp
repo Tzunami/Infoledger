@@ -25,7 +25,7 @@ Infoledge::Infoledge(Infoledge *i) {
 /*************************************************/
 Infoledge::Infoledge(Person &p, Group &g) {
     try{
-        if(p.data==nullptr||g.name=="") throw PCRM_Error("Infoledge Constructor Failed");
+        if(p.data==nullptr||g.GetName()=="") throw PCRM_Error("Infoledge Constructor Failed");
     }
 	catch(PCRM_Error &e) {e.PrintError();}
 
@@ -39,7 +39,7 @@ Infoledge::Infoledge(Person &p, Group &g) {
 /*************************************************/
 Infoledge::Infoledge(Person &p, Group &g, Process e) {
 	try{
-       if(p.data==nullptr||g.name=="") throw PCRM_Error("Infoledge Constructor Failed");
+       if(p.data==nullptr||g.GetName()=="") throw PCRM_Error("Infoledge Constructor Failed");
     }
 	catch(PCRM_Error &e) {e.PrintError();}
 

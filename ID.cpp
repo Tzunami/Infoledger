@@ -8,7 +8,5 @@
 #include "ID.h"
 
 namespace PCRM {
-/*************************************************/
 unsigned int ID::id_counter=0;
-/*************************************************/
 } /* namespace PCRM */
