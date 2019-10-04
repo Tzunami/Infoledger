@@ -26,309 +26,309 @@ STARTING BASIC TEST...
 
 Initializing People & Data
 
-People ppl_1 = bob + frank + sam + alice;
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
+People ppl_1 = bob + frank + sam + alice;<br/>
+Name: Bob ID: 1 Data: Knowledge<br/>
+Name: Frank ID: 2 Data: Knowledge<br/> 
+Name: Sam ID: 3 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/> 
 
-People ppl_2 = sally + alice + mary;
-Name: Sally ID: 6 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+People ppl_2 = sally + alice + mary;<br/>
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
 
-People ppl_3 = ppl_1 + ppl_2;
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
-Name: Sally ID: 6 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+People ppl_3 = ppl_1 + ppl_2;<br/>
+Name: Bob ID: 1 Data: Knowledge<br/> 
+Name: Frank ID: 2 Data: Knowledge<br/> 
+Name: Sam ID: 3 Data: Knowledge<br/> 
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
 
-ppl_2 += pat;
-Name: Sally ID: 6 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
-Name: Pat ID: 0 Data: 
+ppl_2 += pat;<br/>
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
+Name: Pat ID: 0 Data:<br/> 
 
-ppl_2 -= pat;
-Name: Sally ID: 6 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_2 -= pat;<br/>
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
 
-ppl_2 += ppl_1;
-Name: Sally ID: 6 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
+ppl_2 += ppl_1;<br/>
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
+Name: Bob ID: 1 Data: Knowledge<br/> 
+Name: Frank ID: 2 Data: Knowledge<br/> 
+Name: Sam ID: 3 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/> 
 
-ppl_2 -= ppl_1
-Name: Sally ID: 6 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_2 -= ppl_1<br/>
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
 
-ppl_1
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
+ppl_1<br/>
+Name: Bob ID: 1 Data: Knowledge<br/> 
+Name: Frank ID: 2 Data: Knowledge<br/> 
+Name: Sam ID: 3 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/> 
 
-ppl_2 += ppl_1 + alice - bob;
-Name: Sally ID: 6 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
+ppl_2 += ppl_1 + alice - bob;<br/>
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
+Name: Frank ID: 2 Data: Knowledge<br/> 
+Name: Sam ID: 3 Data: Knowledge<br/>
+Name: Alice ID: 4 Data: Knowledge<br/>
 
-ppl_1
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
+ppl_1<br/>
+Name: Bob ID: 1 Data: Knowledge<br/>
+Name: Frank ID: 2 Data: Knowledge<br/> 
+Name: Sam ID: 3 Data: Knowledge<br/> 
+Name: Alice ID: 4 Data: Knowledge<br/>
 
-Reset ppl_1 = alice + mary;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+Reset ppl_1 = alice + mary;<br/>
+Name: Alice ID: 4 Data: Knowledge<br/> 
+Name: Mary ID: 5 Data: Knowledge<br/> 
 
-ppl_2 -= ppl_1 - sam;
-Name: Sally ID: 6 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
+ppl_2 -= ppl_1 - sam;<br/>
+Name: Sally ID: 6 Data: Knowledge<br/> 
+Name: Frank ID: 2 Data: Knowledge<br/> 
+Name: Sam ID: 3 Data: Knowledge<br/> 
 
-ppl_1
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_1<br/>
+Name: Alice ID: 4 Data: Knowledge<br/>
+Name: Mary ID: 5 Data: Knowledge<br/>
 
-People
+People<br/>
 
-ppl_3 = ppl_1 - ppl_2
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_3 = ppl_1 - ppl_2<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-Initialize Group (Requires 2 Person(s))
+Initialize Group (Requires 2 Person(s))<br/>
 
-Group group_1(alice, mary, Group One);
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+Group group_1(alice, mary, Group One);<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-Group group_2(sally, sam, Group Two);
-Name: Sally ID: 6 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
+Group group_2(sally, sam, Group Two);<br/>
+Name: Sally ID: 6 Data: Knowledge <br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
 
-Group group_3(bob, frank, Group Three);
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
+Group group_3(bob, frank, Group Three);<br/>
+Name: Bob ID: 1 Data: Knowledge <br/>
+Name: Frank ID: 2 Data: Knowledge <br/>
 
-Group & Person
+Group & Person<br/>
 
-group_1 = group_1 + bob;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
-Name: Bob ID: 1 Data: Knowledge 
+group_1 = group_1 + bob;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
+Name: Bob ID: 1 Data: Knowledge <br/>
 
-group_1 = group_1 - bob;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+group_1 = group_1 - bob;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge<br/> 
 
-group_1 += sam;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
+group_1 += sam;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
+Name: Sam ID: 3 Data: Knowledge<br/> 
 
-group_1 -= sam;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+group_1 -= sam;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-group_1 = ppl_3;;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+group_1 = ppl_3;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-Group, Person(s), & People
+Group, Person(s), & People<br/>
 
-group_1 += sam + bob;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
-Name: Bob ID: 1 Data: Knowledge 
+group_1 += sam + bob;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
+Name: Bob ID: 1 Data: Knowledge <br/>
 
-group_1 -= sam + bob;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+group_1 -= sam + bob;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-group_1 = group_1 + pl_1 + sam - mary;
-Name: Alice ID: 4 Data: Knowledge 
-Name: Sam ID: 3 Data: Knowledge 
+group_1 = group_1 + pl_1 + sam - mary;<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
 
-ppl_1
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_1<br/>
+Name: Alice ID: 4 Data: Knowledge<br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-group_1 = group_1 - bob - alice;
-Name: Sam ID: 3 Data: Knowledge 
+group_1 = group_1 - bob - alice;<br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
 
-ppl_1
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_1<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-group_1 += bob + frank;
-Name: Sam ID: 3 Data: Knowledge 
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
+group_1 += bob + frank;<br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
+Name: Bob ID: 1 Data: Knowledge <br/>
+Name: Frank ID: 2 Data: Knowledge <br/>
 
-ppl_1
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_1<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-group_1 -= bob + frank;
-Name: Sam ID: 3 Data: Knowledge 
+group_1 -= bob + frank;<br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
 
-ppl_1
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+ppl_1<br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-group_2 = bob + frank;
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
+group_2 = bob + frank;<br/>
+Name: Bob ID: 1 Data: Knowledge <br/>
+Name: Frank ID: 2 Data: Knowledge <br/>
 
-group_1
-Name: Sam ID: 3 Data: Knowledge 
+group_1<br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
 
-group_3 = group_2 + alice - group_1 + bob + mary;
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
-Name: Alice ID: 4 Data: Knowledge 
-Name: Mary ID: 5 Data: Knowledge 
+group_3 = group_2 + alice - group_1 + bob + mary;<br/>
+Name: Bob ID: 1 Data: Knowledge <br/>
+Name: Frank ID: 2 Data: Knowledge <br/>
+Name: Alice ID: 4 Data: Knowledge <br/>
+Name: Mary ID: 5 Data: Knowledge <br/>
 
-group_1 += group_2 - bob - alice;
-Name: Sam ID: 3 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
+group_1 += group_2 - bob - alice;<br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
+Name: Frank ID: 2 Data: Knowledge <br/>
 
-group_2
-Name: Bob ID: 1 Data: Knowledge 
-Name: Frank ID: 2 Data: Knowledge 
+group_2<br/>
+Name: Bob ID: 1 Data: Knowledge <br/>
+Name: Frank ID: 2 Data: Knowledge <br/>
 
-group_1 -= group_2 - bob - alice;
-Name: Sam ID: 3 Data: Knowledge 
+group_1 -= group_2 - bob - alice;<br/>
+Name: Sam ID: 3 Data: Knowledge <br/>
 
-END BASIC TEST...
+END BASIC TEST...<br/>
 
-------------------------------------- STARTING TEST PROCESS...
+------------------------------------- STARTING TEST PROCESS...<br/>
 
-Initializing Person(s) Type B
+Initializing Person(s) Type B<br/>
 
-Initializing People NOT Type A
-People #1
-Name: Bob ID: 26 Data: 
-Name: Frank ID: 27 Data: 
-Name: Sam ID: 28 Data: 
-Name: Alice ID: 29 Data: 
-People #2
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
-People #3
-Name: Bob ID: 26 Data: 
-Name: Frank ID: 27 Data: 
-Name: Sam ID: 28 Data: 
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
+Initializing People NOT Type A<br/>
+People #1<br/>
+Name: Bob ID: 26 Data: <br/>
+Name: Frank ID: 27 Data:<br/> 
+Name: Sam ID: 28 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+People #2<br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
+People #3<br/>
+Name: Bob ID: 26 Data: <br/>
+Name: Frank ID: 27 Data: <br/>
+Name: Sam ID: 28 Data: <br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
 
-Initializing Groups Type B
+Initializing Groups Type B<br/>
 
-Group A
-Name: Bob ID: 26 Data: 
-Name: Frank ID: 27 Data: 
-Name: Sam ID: 28 Data: 
-Name: Alice ID: 29 Data: 
+Group A<br/>
+Name: Bob ID: 26 Data: <br/>
+Name: Frank ID: 27 Data: <br/>
+Name: Sam ID: 28 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
 
-Group B
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
+Group B<br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
 
-Group C
-Name: Bob ID: 26 Data: 
-Name: Frank ID: 27 Data: 
-Name: Sam ID: 28 Data: 
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
+Group C<br/>
+Name: Bob ID: 26 Data: <br/>
+Name: Frank ID: 27 Data: <br/>
+Name: Sam ID: 28 Data: <br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
 
-Creating Data, Process, Output 
-Creating Infoledge (Information + Knowledge) Type D
+Creating Data, Process, Output <br/>
+Creating Infoledge (Information + Knowledge) Type D <br/>
 
-Infoledge il_1(pat, group_A);
-Person:
-Name: Pat ID: 25 Data: 
-Group:
-Name: Bob ID: 26 Data: 
-Name: Frank ID: 27 Data: 
-Name: Sam ID: 28 Data: 
-Name: Alice ID: 29 Data: 
-Result: 
-database.Save(il_1);
+Infoledge il_1(pat, group_A);<br/>
+Person:<br/>
+Name: Pat ID: 25 Data: <br/>
+Group:<br/>
+Name: Bob ID: 26 Data: <br/>
+Name: Frank ID: 27 Data: <br/>
+Name: Sam ID: 28 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Result: <br/>
+database.Save(il_1);<br/>
 
-Infoledge il_2(frank, group_B, process);
-Person:
-Name: Frank ID: 27 Data: 
-Group:
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
-Result: 
+Infoledge il_2(frank, group_B, process);<br/>
+Person:<br/>
+Name: Frank ID: 27 Data: <br/>
+Group:<br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
+Result: <br/>
 
-il_2.RunProcess()
-MyProcess with Person & Group
-process result:
-Person:
-Name: Frank ID: 27 Data: 
-Group:
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
-Result: Knowledge 
-database.Save(il_2);
+il_2.RunProcess()<br/>
+MyProcess with Person & Group<br/>
+process result:<br/>
+Person:<br/>
+Name: Frank ID: 27 Data: <br/>
+Group:<br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
+Result: Knowledge <br/>
+database.Save(il_2);<br/>
 
-database.Print
-#: 0
-Person:
-Name: Pat ID: 25 Data: 
-Group:
-Name: Bob ID: 26 Data: 
-Name: Frank ID: 27 Data: 
-Name: Sam ID: 28 Data: 
-Name: Alice ID: 29 Data: 
-Result: 
-#: 1
-Person:
-Name: Frank ID: 27 Data: 
-Group:
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
-Result: Knowledge 
+database.Print<br/>
+#: 0<br/>
+Person:<br/>
+Name: Pat ID: 25 Data: <br/>
+Group:<br/>
+Name: Bob ID: 26 Data: <br/>
+Name: Frank ID: 27 Data: <br/>
+Name: Sam ID: 28 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Result: <br/>
+#: 1<br/>
+Person:<br/>
+Name: Frank ID: 27 Data: <br/>
+Group:<br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
+Result: Knowledge <br/>
 
-il_1 = database.Get(0);
-Person:
-Name: Pat ID: 25 Data: 
-Group:
-Name: Bob ID: 26 Data: 
-Name: Frank ID: 27 Data: 
-Name: Sam ID: 28 Data: 
-Name: Alice ID: 29 Data: 
-Result: 
+il_1 = database.Get(0); <br/>
+Person:<br/>
+Name: Pat ID: 25 Data: <br/>
+Group:<br/>
+Name: Bob ID: 26 Data: <br/>
+Name: Frank ID: 27 Data: <br/>
+Name: Sam ID: 28 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Result: <br/>
 
-il_1 = database.Get(1);
-Person:
-Name: Frank ID: 27 Data: 
-Group:
-Name: Sally ID: 31 Data: 
-Name: Alice ID: 29 Data: 
-Name: Mary ID: 30 Data: 
-Result: Knowledge 
+il_1 = database.Get(1); <br/>
+Person:<br/>
+Name: Frank ID: 27 Data: <br/>
+Group:<br/>
+Name: Sally ID: 31 Data: <br/>
+Name: Alice ID: 29 Data: <br/>
+Name: Mary ID: 30 Data: <br/>
+Result: Knowledge <br/>
 
-END TEST PROCESS...
+END TEST PROCESS...<br/>
 
 
