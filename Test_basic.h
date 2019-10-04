@@ -125,7 +125,7 @@ int test_basic() {
 	group_1 -= sam;
 	group_1.Print();
 
-	std::cout << "\ngroup_1 = ppl_3;;" << std::endl;
+    std::cout << "\ngroup_1 = ppl_3;" << std::endl;
 	group_1 = ppl_3;
 	group_1.Print();
     /*****************************************************/
