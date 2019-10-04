@@ -5,8 +5,8 @@
  *      Author: tzunami
  */
 #pragma once
-#ifndef PCRM_H_
-#define PCRM_H_
+#ifndef IL_H_
+#define IL_H_
 
 #include "Person.h" //Type B
 #include "Infoledge.h" //Type D includes E (Process)
@@ -16,7 +16,7 @@
 #include "Database.h" //Type C & D
 #include "Group.h" //Type A
 
-#endif /* PCRM_H_ */
+#endif /* IL_H_ */
 
 
 

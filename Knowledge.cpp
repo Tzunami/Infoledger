@@ -7,6 +7,6 @@
 
 #include "Knowledge.h"
 
-namespace PCRM {
+namespace IL {
 /****************************************************************/
-} /* namespace PCRM */
+} /* namespace IL */

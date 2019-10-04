@@ -1,27 +1,27 @@
 /*
- * PCRM_Error.h
+ * IL_Error.h
  *
  *  Created on: Nov 20, 2015
  *      Author: tzunami
  */
 #pragma once
-#ifndef PCRM_ERROR_H_
-#define PCRM_ERROR_H_
+#ifndef IL_ERROR_H_
+#define IL_ERROR_H_
 
 #include <string>
 
-namespace PCRM {
+namespace IL {
 /*************************************************/
-class PCRM_Error {
+class IL_Error {
 public:
-	virtual ~PCRM_Error(){}
-    PCRM_Error(std::string e) : pcrm_error(e) {}
+	virtual ~IL_Error(){}
+    IL_Error(std::string e) : il_error(e) {}
 	void PrintError() {}
 
 private:
-    std::string pcrm_error;
+    std::string il_error;
 };
 /*************************************************/
-} /* namespace PCRM */
+} /* namespace IL */
 /*************************************************/
-#endif /* PCRM_ERROR_H_ */
+#endif /* IL_ERROR_H_ */

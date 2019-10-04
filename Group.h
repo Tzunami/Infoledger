@@ -10,7 +10,7 @@
 
 #include "Person.h"
 
-namespace PCRM {
+namespace IL {
 /*************************************************************************************/
 class Group: public ID, public People {
 public:
@@ -49,6 +49,6 @@ public:
     Group &operator-=(Group *g);
 };
 /********************************************/
-} /* namespace PCRM */
+} /* namespace IL */
 
 #endif /* GROUP_H_ */

@@ -5,14 +5,14 @@
  *      Author: tzunami
  */
 
-#include "PCRM.h"
+#include "Infoledger.h"
 #include <iostream> // Library to print to console
 
 // Testing Exclusive
 #include "Test_basic.h"
 #include "Test_process.h"
 
-using namespace PCRM;
+using namespace IL;
 
 int main() {
     test_basic();

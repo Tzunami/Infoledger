@@ -1,16 +1,16 @@
 /*
- * PCRMError.cpp
+ * ILError.cpp
  *
  *  Created on: Nov 20, 2015
  *      Author: tzunami
  */
 
-#include "PCRM_Error.h"
+#include "IL_Error.h"
 
-namespace PCRM {
+namespace IL {
 /**************************************/
-PCRM_Error::PCRM_Error(std::string e) {
+IL_Error::IL_Error(std::string e) {
 	ew_error = e;
 }
 /**************************************/
-} /* namespace PCRM_ERRORS */
+} /* namespace IL_ERRORS */

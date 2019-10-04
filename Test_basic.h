@@ -6,11 +6,11 @@
  */
 
 
-#include "PCRM.h"
+#include "Infoledger.h"
 #include <iostream> // Library to print to console
 #include <stdarg.h>
 
-using namespace PCRM;
+using namespace IL;
 
 void addNewData(People& p) {
     std::string career[] = {"CEO", "Dentist", "Developer", "Doctor"};

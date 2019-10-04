@@ -21,13 +21,14 @@ DISTFILES += \
 HEADERS += \
     Data.h \
     Database.h \
-    PCRM.h \
-    PCRM.h \
-    PCRM_Error.h \
-    PCRM_Error.h \
+    IL.h \
+    IL.h \
+    IL_Error.h \
+    IL_Error.h \
     Group.h \
     ID.h \
     Infoledge.h \
+    Infoledger.h \
     Information.h \
     Knowledge.h \
     List.h \

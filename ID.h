@@ -12,7 +12,7 @@
 
 
 
-namespace PCRM {
+namespace IL {
 /***************************************************************/
 class ID {
 public:
@@ -30,6 +30,6 @@ private:
     static unsigned int id_counter;
 };
 /***************************************************************/
-} /* namespace PCRM */
+} /* namespace IL */
 
 #endif /* ID_H_ */

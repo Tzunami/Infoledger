@@ -11,9 +11,9 @@
 #include "Data.h"
 #include "Infoledge.h"
 #include <vector>
-#include "PCRM_Error.h"
+#include "IL_Error.h"
 
-namespace PCRM {
+namespace IL {
 /*********************************************/
 class Database { //Type C
 public:
@@ -27,5 +27,5 @@ private:
 	std::vector<Infoledge> database;
 };
 /*********************************************/
-} /* namespace PCRM */
+} /* namespace IL */
 #endif /* DATABASE_H_ */

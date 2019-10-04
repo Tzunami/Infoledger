@@ -7,7 +7,7 @@
 
 #include "Group.h"
 
-namespace PCRM {
+namespace IL {
 /*********************************************************/
 Group::Group(): People() {
     //std::cout<<"Group Constructor"<<std::end;
@@ -151,4 +151,4 @@ Group &Group::operator-=(Group *g){
     return *this;
 }
 /*********************************************************/
-} /* namespace PCRM */
+} /* namespace IL */

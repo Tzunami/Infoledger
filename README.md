@@ -1,9 +1,9 @@
-# PenguineCRM
+# Infoledger
 
 # History
-This is an open-source CRM I wrote many years ago and thought I lost when my drive and backup died. I came across an old drive of backups, and to my surprise...look what I found, along with a bunch of unrelated goodies. So many years later let me introduce PenguineCRM :)
+This is an open-source CRM I wrote many years ago and thought I lost when my drive and backup died. I came across an old drive of backups, and to my surprise...look what I found, along with a bunch of unrelated goodies. So many years later let me introduce Infoledger :)
 
-# What is PenguineCRM ? It's CRM Math
+# What is Infoledger ? It's CRM Math
 What is CRM Math? We will look at examples in the CRM Math Section.<br/>
 But before we start we need to understand a few Principles.<br/>
 

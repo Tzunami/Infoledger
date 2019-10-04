@@ -10,7 +10,7 @@
 
 #include <iostream> // can remove
 
-namespace PCRM {
+namespace IL {
 /************************************/
 class Data {
 public:
@@ -25,5 +25,5 @@ public:
     const std::string type;
 };
 /************************************/
-} /* namespace PCRM */
+} /* namespace IL */
 #endif /* DATA_H_ */

@@ -12,11 +12,11 @@
 #include "ID.h"
 #include "Data.h"
 #include "List.h"
-#include "PCRM_Error.h"
+#include "IL_Error.h"
 
 #define People List<Person>
 
-namespace PCRM {
+namespace IL {
 
 /***************************************/
 class Person: public ID {

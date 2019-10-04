@@ -11,11 +11,11 @@
 #include "Person.h"
 #include "Data.h"
 #include "Group.h"
-#include "PCRM_Error.h"
+#include "IL_Error.h"
 #include "Knowledge.h"
 #include "Information.h"
 
-namespace PCRM {
+namespace IL {
 class Infoledge;
 typedef void (*Process)(Infoledge &il, Person &p, Group &g);
 /**********************************************************/
@@ -40,5 +40,5 @@ public:
     //Infoledge * previous;
 };
 /**********************************************************/
-} /* namespace PCRM */
+} /* namespace IL */
 #endif /* INFOLEDGE_H_ */
