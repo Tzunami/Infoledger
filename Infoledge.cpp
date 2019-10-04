@@ -9,12 +9,10 @@
 
 namespace PCRM {
 
-Infoledge::Infoledge() {
-    person = nullptr;
-    group = nullptr;
-    process = nullptr;
+Infoledge::Infoledge():
+    person(nullptr), group(nullptr), result(nullptr), process(nullptr) {
     //next = nullptr;
-    previous = nullptr;
+    //previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
@@ -23,31 +21,27 @@ Infoledge::Infoledge(Infoledge *i) {
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
-Infoledge::Infoledge(Person &p, Group &g) {
-    try{
-        if(p.data==nullptr||g.GetName()=="") throw PCRM_Error("Infoledge Constructor Failed");
-    }
-	catch(PCRM_Error &e) {e.PrintError();}
+Infoledge::Infoledge(Person &p, Group &g):
+    person(&p), group(&g), result(nullptr), process(nullptr) {
 
-	person = &p;
-    group = &g;
-    process = nullptr;
+    try{
+        if(p.GetName()=="") throw PCRM_Error("Infoledge Constructor Failed");
+    }
+    catch(PCRM_Error &e) {e.PrintError();}
     //next = nullptr;
-    previous = nullptr;
+    //previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
-Infoledge::Infoledge(Person &p, Group &g, Process e) {
+Infoledge::Infoledge(Person &p, Group &g, Process e):
+    person(&p), group(&g), result(nullptr), process(e) {
+
 	try{
        if(p.data==nullptr||g.GetName()=="") throw PCRM_Error("Infoledge Constructor Failed");
     }
-	catch(PCRM_Error &e) {e.PrintError();}
-
-	person = &p;
-    group = &g;
-	process = e;
+    catch(PCRM_Error &e) { e.PrintError(); }
     //next = nullptr;
-    previous = nullptr;
+    //previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
@@ -56,11 +50,22 @@ void Infoledge::Print() {
 	person->Print();
 	std::cout<<"Group:"<<std::endl;
     group->Print();
-	data.Print();
-    if(previous!=nullptr) {
+    std::cout<<"Result: ";
+
+    if(result == nullptr) return;
+    if(result->type != DATA_TYPE_INFORMATION) {
+        Information* i = reinterpret_cast<Information*>(result);
+        i->Print();
+    }
+    if(result->type != DATA_TYPE_KNOWLEDGE) {
+        Knowledge* k = reinterpret_cast<Knowledge*>(result);
+        k->Print();
+    }
+
+    /*if(previous!=nullptr) {
 		std::cout<<"------------ Previous:"<<std::endl;
 		previous->Print();
-	}
+    }*/
 }
 /*************************************************/
 } // namespace

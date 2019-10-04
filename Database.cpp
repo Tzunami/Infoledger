@@ -22,17 +22,15 @@ Database::~Database() {
 	//std::cout<<"Database Destructor"<<std::endl;
 }
 /*************************************************/
-void Database::Save(Data *result, Infoledge &i) {
-	Infoledge info(i);
-	info.data = *result;
+void Database::Save(Infoledge &i) {
+	Infoledge info(i);   
 	database.push_back(info);
-	delete result;
 }
 /*************************************************/
 Infoledge Database::Get(unsigned int i) {
 	if(i<=database.size()) {
 		Infoledge info(database[i]);
-		info.previous = &database[i];
+        //info.previous = &database[i];
 		return info;
 	}
 	try {
@@ -42,8 +40,11 @@ Infoledge Database::Get(unsigned int i) {
 }
 /*************************************************/
 void Database::Print() {
-	for(unsigned int i=0; i<database.size(); i++)
+    for(unsigned int i=0; i<database.size(); i++) {
+        std::cout << "#: " << i << std::endl;
 		database[i].Print();
+        std::cout << std::endl;
+    }
 }
 /*************************************************/
 } /* namespace PCRM */

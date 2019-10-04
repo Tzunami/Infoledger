@@ -9,8 +9,4 @@
 
 namespace PCRM {
 /*******************************/
-Data::Data() {
-	//std::cout<<"Data Constructor"<<std::endl;
-}
-/*******************************/
 } /* namespace PCRM_Data */

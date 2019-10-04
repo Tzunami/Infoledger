@@ -7,6 +7,7 @@
 #pragma once
 #ifndef INFORMATION_H_
 #define INFORMATION_H_
+#define DATA_TYPE_INFORMATION "Information"
 
 #include "Data.h"
 
@@ -14,9 +15,10 @@ namespace PCRM {
 
 class Information: public Data {
 public:
-	Information();
-	virtual ~Information();
-	void Print() {std::cout<<"Information Printing"<<std::endl;}
+    Information(): Data(DATA_TYPE_INFORMATION) {}
+    Information(Data& d): Data(d.type) {}
+    virtual ~Information() {}
+    void Print() { std::cout << DATA_TYPE_INFORMATION << " "; }
 };
 
 } /* namespace PCRM */

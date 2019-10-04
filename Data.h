@@ -16,13 +16,13 @@ class Data {
 public:
     // truple in the future
 	//constructors
-	Data();
-    //Data(std::string s);
+    //Data();
+    Data(std::string type_name): type(type_name) {}
+    Data(Data& d): type(d.type) {}
     virtual ~Data() {}
+    virtual void Print() { std::cout<<"Data Printing"<<std::endl; }
 
-    virtual void Print() {
-        std::cout<<"Data Printing"<<std::endl;
-    }
+    const std::string type;
 };
 /************************************/
 } /* namespace PCRM */

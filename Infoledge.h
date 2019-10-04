@@ -12,16 +12,19 @@
 #include "Data.h"
 #include "Group.h"
 #include "PCRM_Error.h"
+#include "Knowledge.h"
+#include "Information.h"
 
 namespace PCRM {
-typedef Data* (*Process)(Person &p, Group &g);
+class Infoledge;
+typedef void (*Process)(Infoledge &il, Person &p, Group &g);
 /**********************************************************/
-class Infoledge {
+class Infoledge {    
 public:
 	//members
-	Person *person;
-    Group *group;
-	Data data;
+    Person* person;
+    Group* group;
+    Data* result;
 	Process process; //Type E
 	//constructors
 	Infoledge();
@@ -30,11 +33,11 @@ public:
     Infoledge(Person &p, Group &g, Process e);
 	//functions
 	void Print();
-    Data* RunProcess() {return (process)(*person, *group);}
-    Data* RunProcess(Process pr) {return (*pr)(*person, *group);}
+    void RunProcess() {return (process)(*this, *person, *group);}
+    void RunProcess(Process pr) {return (*pr)(*this, *person, *group);}
 //private:
 	//Infoledge * next;
-	Infoledge * previous;
+    //Infoledge * previous;
 };
 /**********************************************************/
 } /* namespace PCRM */

@@ -15,7 +15,7 @@ namespace PCRM {
 class Group: public ID, public People {
 public:
 	//members
-	Data data;
+    Data* data;
 	//constructors
     Group();
     Group(People *pl);

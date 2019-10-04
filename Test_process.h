@@ -11,12 +11,11 @@
 
 using namespace PCRM;
 /*****************************************************/
-Data* MyProcess(Person &person, Group &group) {
-    std::cout<<"---------- Doing MyProcess with Person & Group -------------- "<<std::endl;
+void MyProcess(Infoledge &il, Person &person, Group &group) {
+    std::cout<<"MyProcess with Person & Group"<<std::endl;
     //Some calulation with person & group here
     Knowledge *k = new Knowledge("Discovery");
-    Data *data = k;
-    return data;
+    il.result = k;
 }
 /*****************************************************/
 int test_process() {
@@ -59,36 +58,44 @@ int test_process() {
 	group_C.Print();
 
 	/*****************************************************/
-	std::cout<<"\nCreating Data, Information, Knowledge, Process, Output "<<std::endl;
+    std::cout<<"\nCreating Data, Process, Output "<<std::endl;
 	Information info;
-    //Knowledge knowledge;
-	Process process = &MyProcess;
-	Data* pdata = &info;
+    Process process = &MyProcess;
 	Database database;
-	pdata->Print();
 
-	/*****************************************************/
-	std::cout<<"\nCreating Infoledge (Information + Knowledge) Type D"<<std::endl;
-	std::cout<<"Infoledge il_1(pat, group_A);"<<std::endl;
+    /*****************************************************/
+    std::cout<<"Creating Infoledge (Information + Knowledge) Type D"<<std::endl;
+    std::cout<<"\nInfoledge il_1(pat, group_A);"<<std::endl;
 	Infoledge il_1(pat, group_A);
 	il_1.Print();
+    database.Save(il_1);
+    std::cout<<"\ndatabase.Save(il_1);"<<std::endl;
 
     std::cout<<"\nInfoledge il_2(frank, group_B, process);"<<std::endl;
-	Infoledge il_2(frank, group_B, process);
-    std::cout<<"\nprocess = il_2.RunProcess()"<<std::endl;
-    pdata = il_2.RunProcess();
-	il_2.Print();
-	std::cout<<"\npdata->Print();"<<std::endl;
-	pdata->Print();
-	std::cout<<"\ndatabase.Save(*pdata, il_2);"<<std::endl;
-	database.Save(pdata, il_2);
+    Infoledge il_2(frank, group_B, process);
+    il_2.Print();
 
-	std::cout<<"\nil_1 = database.Get(0);"<<std::endl;
-	il_1 = database.Get(0);
-	il_1.Print();
+    std::cout<<"\n\nil_2.RunProcess()"<<std::endl;
+    il_2.RunProcess();
+    std::cout<<"process result:"<<std::endl;
+	il_2.Print();    
+
+    std::cout<<"\ndatabase.Save(il_2);"<<std::endl;
+    database.Save(il_2);
+
+    std::cout<<"\ndatabase.Print"<<std::endl;
+    database.Print();
+
+    std::cout<<"\nil_1 = database.Get(0);"<<std::endl;
+    il_1 = database.Get(0);
+    il_1.Print();
+
+    std::cout<<"\n\nil_1 = database.Get(1);"<<std::endl;
+    il_1 = database.Get(1);
+    il_1.Print();
 
 	/************************* End ****************************/
-    std::cout << "\nEND TEST PROCESS...\n" << std::endl;
+    std::cout << "\n\nEND TEST PROCESS...\n" << std::endl;
 	return 0;
 }
 

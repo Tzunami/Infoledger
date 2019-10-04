@@ -20,7 +20,7 @@ public:
 	Database();
 	Database(Database *db);
 	virtual ~Database();
-    void Save(Data *result, Infoledge &i);
+    void Save(Infoledge &i);
 	Infoledge Get(unsigned int i);
     void Print();
 private:

@@ -9,12 +9,4 @@
 
 namespace PCRM {
 /**********************************************************/
-Information::Information() {
-	//std::cout<<"Infoledge Constructor"<<std::endl;
-}
-/**********************************************************/
-Information::~Information() {
-	//std::cout<<"Infoledge Destructor!!!"<<std::endl;
-}
-/**********************************************************/
 } /* namespace PCRM */

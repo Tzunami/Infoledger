@@ -8,6 +8,7 @@
 #pragma once
 #ifndef KNOWLEDGE_H_
 #define KNOWLEDGE_H_
+#define DATA_TYPE_KNOWLEDGE "Knowledge"
 
 #include "Data.h"
 
@@ -15,9 +16,10 @@ namespace PCRM {
 
 class Knowledge: public Data {
 public:
-    Knowledge(std::string k);
-	virtual ~Knowledge();
-    void Print() { std::cout<<"Knowledge: "<< knowledge; }
+    Knowledge(): Data(DATA_TYPE_KNOWLEDGE) {}
+    Knowledge(std::string k): Data(DATA_TYPE_KNOWLEDGE), knowledge(k) {}
+    virtual ~Knowledge() {}
+    void Print() { std::cout<<DATA_TYPE_KNOWLEDGE<<" "; }
 
     std::string knowledge;
 };
