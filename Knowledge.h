@@ -12,7 +12,7 @@
 
 #include "Data.h"
 
-namespace IL {
+namespace Infoledger {
 
 class Knowledge: public Data {
 public:
@@ -24,6 +24,6 @@ public:
     std::string knowledge;
 };
 
-} /* namespace IL */
+} /* namespace Infoledger */
 
 #endif /* KNOWLEDGE_H_ */

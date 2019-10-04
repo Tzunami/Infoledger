@@ -7,10 +7,10 @@
 
 #include "IL_Error.h"
 
-namespace IL {
+namespace Infoledger {
 /**************************************/
 IL_Error::IL_Error(std::string e) {
 	ew_error = e;
 }
 /**************************************/
-} /* namespace IL_ERRORS */
+} /* namespace Infoledger_ERRORS */

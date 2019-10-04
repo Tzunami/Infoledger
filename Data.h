@@ -10,7 +10,7 @@
 
 #include <iostream> // can remove
 
-namespace IL {
+namespace Infoledger {
 /************************************/
 class Data {
 public:
@@ -25,5 +25,5 @@ public:
     const std::string type;
 };
 /************************************/
-} /* namespace IL */
+} /* namespace Infoledger */
 #endif /* DATA_H_ */

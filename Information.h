@@ -11,7 +11,7 @@
 
 #include "Data.h"
 
-namespace IL {
+namespace Infoledger {
 
 class Information: public Data {
 public:
@@ -21,6 +21,6 @@ public:
     void Print() { std::cout << DATA_TYPE_INFORMATION << " "; }
 };
 
-} /* namespace IL */
+} /* namespace Infoledger */
 
 #endif /* INFORMATION_H_ */

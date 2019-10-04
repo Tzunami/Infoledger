@@ -15,7 +15,7 @@
 #include "Knowledge.h"
 #include "Information.h"
 
-namespace IL {
+namespace Infoledger {
 class Infoledge;
 typedef void (*Process)(Infoledge &il, Person &p, Group &g);
 /**********************************************************/
@@ -40,5 +40,5 @@ public:
     //Infoledge * previous;
 };
 /**********************************************************/
-} /* namespace IL */
+} /* namespace Infoledger */
 #endif /* INFOLEDGE_H_ */

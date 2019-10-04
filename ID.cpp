@@ -7,6 +7,6 @@
 
 #include "ID.h"
 
-namespace IL {
+namespace Infoledger {
 unsigned int ID::id_counter=0;
-} /* namespace IL */
+} /* namespace Infoledger */

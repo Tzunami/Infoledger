@@ -7,6 +7,6 @@
 
 #include "Information.h"
 
-namespace IL {
+namespace Infoledger {
 /**********************************************************/
-} /* namespace IL */
+} /* namespace Infoledger */

@@ -12,7 +12,7 @@
 #include "Test_basic.h"
 #include "Test_process.h"
 
-using namespace IL;
+using namespace Infoledger;
 
 int main() {
     test_basic();

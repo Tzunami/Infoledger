@@ -11,7 +11,7 @@
 #include <vector>
 #include <iostream> //delete
 
-namespace IL {
+namespace Infoledger {
 /****************************************************************/
 template <class T> //Base Class is ID
 class List {
@@ -181,5 +181,5 @@ void List<T>::Print() {
 }
 
 /****************************************************************/
-} /* namespace IL */
+} /* namespace Infoledger */
 #endif /* LIST_H_ */

@@ -16,7 +16,7 @@
 
 #define People List<Person>
 
-namespace IL {
+namespace Infoledger {
 
 /***************************************/
 class Person: public ID {

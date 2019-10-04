@@ -7,7 +7,7 @@
 
 #include "Database.h"
 
-namespace IL {
+namespace Infoledger {
 
 Database::Database() {
 	//std::cout<<"Database Constructor"<<std::endl;
@@ -47,4 +47,4 @@ void Database::Print() {
     }
 }
 /*************************************************/
-} /* namespace IL */
+} /* namespace Infoledger */

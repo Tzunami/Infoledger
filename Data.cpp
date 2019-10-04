@@ -7,6 +7,6 @@
 
 #include "Data.h"
 
-namespace IL {
+namespace Infoledger {
 /*******************************/
-} /* namespace IL_Data */
+} /* namespace Infoledger_Data */

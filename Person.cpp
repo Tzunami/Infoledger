@@ -7,7 +7,7 @@
 
 #include "Person.h"
 
-namespace IL {
+namespace Infoledger {
 /********************************************************/
 Person::Person(std::string n): ID(n), data(nullptr) {
     //std::cout<<"Person Constructor, Name: "<<name<<std::endl;
@@ -37,5 +37,5 @@ void Person::Print() {
     std::cout << std::endl;
 }
 /********************************************************/
-} /* namespace IL_Person */
+} /* namespace Infoledger_Person */
 /********************************************************/

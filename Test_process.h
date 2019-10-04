@@ -9,7 +9,7 @@
 #include "Infoledger.h"
 #include <iostream> // Library to print to console
 
-using namespace IL;
+using namespace Infoledger;
 /*****************************************************/
 void MyProcess(Infoledge &il, Person &person, Group &group) {
     std::cout<<"MyProcess with Person & Group"<<std::endl;

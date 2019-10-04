@@ -7,7 +7,7 @@
 
 #include "Infoledge.h"
 
-namespace IL {
+namespace Infoledger {
 
 Infoledge::Infoledge():
     person(nullptr), group(nullptr), result(nullptr), process(nullptr) {

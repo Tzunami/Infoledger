@@ -13,7 +13,7 @@
 #include <vector>
 #include "IL_Error.h"
 
-namespace IL {
+namespace Infoledger {
 /*********************************************/
 class Database { //Type C
 public:
@@ -27,5 +27,5 @@ private:
 	std::vector<Infoledge> database;
 };
 /*********************************************/
-} /* namespace IL */
+} /* namespace Infoledger */
 #endif /* DATABASE_H_ */

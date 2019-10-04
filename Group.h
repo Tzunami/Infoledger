@@ -10,7 +10,7 @@
 
 #include "Person.h"
 
-namespace IL {
+namespace Infoledger {
 /*************************************************************************************/
 class Group: public ID, public People {
 public:
@@ -49,6 +49,6 @@ public:
     Group &operator-=(Group *g);
 };
 /********************************************/
-} /* namespace IL */
+} /* namespace Infoledger */
 
 #endif /* GROUP_H_ */

@@ -10,7 +10,7 @@
 
 #include <string>
 
-namespace IL {
+namespace Infoledger {
 /*************************************************/
 class IL_Error {
 public:
@@ -22,6 +22,6 @@ private:
     std::string il_error;
 };
 /*************************************************/
-} /* namespace IL */
+} /* namespace Infoledger */
 /*************************************************/
 #endif /* IL_ERROR_H_ */

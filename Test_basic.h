@@ -10,7 +10,7 @@
 #include <iostream> // Library to print to console
 #include <stdarg.h>
 
-using namespace IL;
+using namespace Infoledger;
 
 void addNewData(People& p) {
     std::string career[] = {"CEO", "Dentist", "Developer", "Doctor"};

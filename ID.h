@@ -12,7 +12,7 @@
 
 
 
-namespace IL {
+namespace Infoledger {
 /***************************************************************/
 class ID {
 public:
@@ -30,6 +30,6 @@ private:
     static unsigned int id_counter;
 };
 /***************************************************************/
-} /* namespace IL */
+} /* namespace Infoledger */
 
 #endif /* ID_H_ */
