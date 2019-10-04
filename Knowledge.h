@@ -12,7 +12,7 @@
 
 #include "Data.h"
 
-namespace PCRM {
+namespace IL {
 
 class Knowledge: public Data {
 public:
@@ -24,6 +24,6 @@ public:
     std::string knowledge;
 };
 
-} /* namespace PCRM */
+} /* namespace IL */
 
 #endif /* KNOWLEDGE_H_ */

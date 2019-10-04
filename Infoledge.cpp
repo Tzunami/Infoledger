@@ -7,7 +7,7 @@
 
 #include "Infoledge.h"
 
-namespace PCRM {
+namespace IL {
 
 Infoledge::Infoledge():
     person(nullptr), group(nullptr), result(nullptr), process(nullptr) {
@@ -25,9 +25,9 @@ Infoledge::Infoledge(Person &p, Group &g):
     person(&p), group(&g), result(nullptr), process(nullptr) {
 
     try{
-        if(p.GetName()=="") throw PCRM_Error("Infoledge Constructor Failed");
+        if(p.GetName()=="") throw IL_Error("Infoledge Constructor Failed");
     }
-    catch(PCRM_Error &e) {e.PrintError();}
+    catch(IL_Error &e) {e.PrintError();}
     //next = nullptr;
     //previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
@@ -37,9 +37,9 @@ Infoledge::Infoledge(Person &p, Group &g, Process e):
     person(&p), group(&g), result(nullptr), process(e) {
 
 	try{
-       if(p.data==nullptr||g.GetName()=="") throw PCRM_Error("Infoledge Constructor Failed");
+       if(p.data==nullptr||g.GetName()=="") throw IL_Error("Infoledge Constructor Failed");
     }
-    catch(PCRM_Error &e) { e.PrintError(); }
+    catch(IL_Error &e) { e.PrintError(); }
     //next = nullptr;
     //previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;

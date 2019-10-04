@@ -7,6 +7,6 @@
 
 #include "Information.h"
 
-namespace PCRM {
+namespace IL {
 /**********************************************************/
-} /* namespace PCRM */
+} /* namespace IL */
