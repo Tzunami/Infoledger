@@ -331,6 +331,4 @@ Result: Knowledge
 
 END TEST PROCESS...
 
-Press <RETURN> to close this window...
-
 
