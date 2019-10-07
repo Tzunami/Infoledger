@@ -10,6 +10,8 @@
 
 #include <iostream> // can remove
 
+enum DataType {ERROR, INFORMATION, KNOWLEDGE};
+
 namespace Infoledger {
 /************************************/
 class Data {
@@ -17,12 +19,12 @@ public:
     // truple in the future
 	//constructors
     //Data();
-    Data(std::string type_name): type(type_name) {}
-    Data(Data& d): type(d.type) {}
+    Data(DataType datatype): type(datatype), content("") {}
+    Data(Data& d): type(d.type), content("") {}
     virtual ~Data() {}
-    virtual void Print() { std::cout<<"Data Printing"<<std::endl; }
 
-    const std::string type;
+    DataType type;
+    std::string content;
 };
 /************************************/
 } /* namespace Infoledger */

@@ -7,7 +7,6 @@
 #pragma once
 #ifndef INFORMATION_H_
 #define INFORMATION_H_
-#define DATA_TYPE_INFORMATION "Information"
 
 #include "Data.h"
 
@@ -15,10 +14,14 @@ namespace Infoledger {
 
 class Information: public Data {
 public:
-    Information(): Data(DATA_TYPE_INFORMATION) {}
-    Information(Data& d): Data(d.type) {}
+    Information(): Data(DataType::INFORMATION) {}
+    Information(Data& d): Data(DataType::INFORMATION) {
+        if(d.type != DataType::INFORMATION) throw;
+        type = DataType::INFORMATION;
+    }
     virtual ~Information() {}
-    void Print() { std::cout << DATA_TYPE_INFORMATION << " "; }
+
+    void Print() { std::cout << "Information "; }
 };
 
 } /* namespace Infoledger */

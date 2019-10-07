@@ -15,7 +15,7 @@ namespace Infoledger {
 class Group: public ID, public People {
 public:
 	//members
-    Data* data;
+    List<Data> data;
 	//constructors
     Group();
     Group(People *pl);

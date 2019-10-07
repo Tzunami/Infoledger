@@ -21,7 +21,7 @@ namespace Infoledger {
 /***************************************/
 class Person: public ID {
 public:
-	Data *data;
+    List<Data> data;
 	// constructor
     Person(std::string n);
     Person(std::string n, Data* d);

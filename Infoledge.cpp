@@ -35,11 +35,6 @@ Infoledge::Infoledge(Person &p, Group &g):
 /*************************************************/
 Infoledge::Infoledge(Person &p, Group &g, Process e):
     person(&p), group(&g), result(nullptr), process(e) {
-
-	try{
-       if(p.data==nullptr||g.GetName()=="") throw IL_Error("Infoledge Constructor Failed");
-    }
-    catch(IL_Error &e) { e.PrintError(); }
     //next = nullptr;
     //previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
@@ -53,14 +48,19 @@ void Infoledge::Print() {
     std::cout<<"Result: ";
 
     if(result == nullptr) return;
-    if(result->type != DATA_TYPE_INFORMATION) {
-        Information* i = reinterpret_cast<Information*>(result);
-        i->Print();
-    }
-    if(result->type != DATA_TYPE_KNOWLEDGE) {
-        Knowledge* k = reinterpret_cast<Knowledge*>(result);
-        k->Print();
-    }
+    switch(result->type) {
+        case DataType::ERROR: { throw; }
+        case DataType::KNOWLEDGE: {
+            Knowledge* i = reinterpret_cast<Knowledge*>(result);
+            i->Print();
+            break;
+            }
+        case DataType::INFORMATION: {
+            Information* i = reinterpret_cast<Information*>(result);
+            i->Print();
+            break;
+            } // end case
+        } // end switch
 
     /*if(previous!=nullptr) {
 		std::cout<<"------------ Previous:"<<std::endl;

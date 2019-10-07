@@ -16,12 +16,13 @@ namespace Infoledger {
 
 class Knowledge: public Data {
 public:
-    Knowledge(): Data(DATA_TYPE_KNOWLEDGE) {}
-    Knowledge(std::string k): Data(DATA_TYPE_KNOWLEDGE), knowledge(k) {}
+    Knowledge(): Data(DataType::KNOWLEDGE) {}
+    Knowledge(Data& d): Data(DataType::KNOWLEDGE) {
+        if(d.type != DataType::KNOWLEDGE) throw;
+        type = DataType::KNOWLEDGE;
+    }
     virtual ~Knowledge() {}
-    void Print() { std::cout<<DATA_TYPE_KNOWLEDGE<<" "; }
-
-    std::string knowledge;
+    void Print() { std::cout << "Knowledge "; }
 };
 
 } /* namespace Infoledger */

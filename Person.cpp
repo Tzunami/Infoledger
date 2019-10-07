@@ -9,18 +9,18 @@
 
 namespace Infoledger {
 /********************************************************/
-Person::Person(std::string n): ID(n), data(nullptr) {
+Person::Person(std::string n): ID(n) {
     //std::cout<<"Person Constructor, Name: "<<name<<std::endl;
 }
 /********************************************************/
-Person::Person(std::string n, Data* d): ID(n), data(d) {
+Person::Person(std::string n, Data* d): ID(n) {
     //std::cout<<"Person Constructor"<<std::endl;
 }
 /********************************************************/
 bool Person::operator==(Person &p) const {
     if(this->GetName() != p.GetName()) return false;
     if(this->GetID()   != p.GetID())   return false;
-    //if(this->data != p.data) return false;
+    if(this->data.list != p.data.list) return false;
     return true;
 }
 /********************************************************/
@@ -33,7 +33,7 @@ People &Person::operator+(Person &p) {
 /********************************************************/
 void Person::Print() {
     std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: ";
-    if(data!=nullptr) data->Print();
+    for(auto& print : data.list) std::cout << print->content << std::endl;
     std::cout << std::endl;
 }
 /********************************************************/

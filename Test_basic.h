@@ -15,7 +15,9 @@ void addNewData(People& p) {
     unsigned int elm;
     for(auto& person : p.list) {
         elm = rand() % 4;
-        person->data = new Knowledge(career[elm]);
+        Knowledge* k = new Knowledge();
+        person->data.list.push_back(k);
+        person->data.list[person->data.list.size()-1]->content = career[elm];
     }
 }
 
