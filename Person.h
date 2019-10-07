@@ -24,8 +24,8 @@ public:
     List<Data> data;
 	// constructor
     Person(std::string n);
-    Person(std::string n, Data* d);
-    virtual ~Person() {}
+    Person(std::string n, List<Data> d);
+    //virtual ~Person() {}
 	//operators
     bool operator==(Person &p) const;
     People &operator+(Person &p) ;

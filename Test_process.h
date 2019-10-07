@@ -12,7 +12,7 @@
 using namespace Infoledger;
 /*****************************************************/
 void MyProcess(Infoledge &il, Person &person, Group &group) {
-    std::cout<<"MyProcess with Person & Group"<<std::endl;
+    std::cout<<"MyProcess(Person, Group)"<<std::endl;
     Knowledge *k = new Knowledge();
     k->content = "Discovery";
     person.data.list.push_back(k);

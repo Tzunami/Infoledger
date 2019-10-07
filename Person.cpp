@@ -13,7 +13,7 @@ Person::Person(std::string n): ID(n) {
     //std::cout<<"Person Constructor, Name: "<<name<<std::endl;
 }
 /********************************************************/
-Person::Person(std::string n, Data* d): ID(n) {
+Person::Person(std::string n, List<Data> d): ID(n), data(d) {
     //std::cout<<"Person Constructor"<<std::endl;
 }
 /********************************************************/
