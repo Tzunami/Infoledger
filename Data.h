@@ -21,10 +21,11 @@ public:
     //Data();
     Data(DataType datatype): type(datatype), content("") {}
     Data(Data& d): type(d.type), content("") {}
-    virtual ~Data() {}
+    //virtual ~Data() {}
 
     DataType type;
     std::string content;
+    float skill;
 };
 /************************************/
 } /* namespace Infoledger */

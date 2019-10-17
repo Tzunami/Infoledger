@@ -13,7 +13,7 @@
 
 namespace Infoledger {
 /****************************************************************/
-template <class T> //Base Class is ID
+template <class T>
 class List {
 public:
 	//members
@@ -52,15 +52,11 @@ protected:
     void RemoveDuplicate(const T &p);
     void RemoveDuplicate(List<T> &p);
 };
-
 /******************************** cpp ********************************/
-template<class T>
-List<T>::List() {}
+template<class T> List<T>::List() {}
 /********************************************/
-template<class T>
-List<T>::List(T& t) { list.push_back(&t); }
-//operators T
-/********************************************/
+template<class T> List<T>::List(T& t) { list.push_back(&t); }
+/***************************** operators *****************************/
 template <class T>
 List<T> &List<T>::operator+(T& p) {
     unsigned int duplicate = GetDuplicate(p);
@@ -118,7 +114,6 @@ List<T> &List<T>::operator+(List<T>& p) {
     pl->list.insert(pl->list.end(), p.list.begin(), p.list.end());
     return *pl;
 }
-
 /********************************************/
 template <class T>
 List<T> &List<T>::operator-(List<T>& p) {
@@ -179,7 +174,6 @@ void List<T>::Print() {
         list[i]->Print();
     }//end for
 }
-
 /****************************************************************/
 } /* namespace Infoledger */
 #endif /* LIST_H_ */

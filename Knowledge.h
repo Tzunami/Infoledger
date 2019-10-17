@@ -21,7 +21,7 @@ public:
         if(d.type != DataType::KNOWLEDGE) throw;
         type = DataType::KNOWLEDGE;
     }
-    virtual ~Knowledge() {}
+    //virtual ~Knowledge() {}
     void Print() { std::cout << "Knowledge "; }
 };
 

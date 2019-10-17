@@ -5,13 +5,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        Data.cpp \
         Database.cpp \
         Group.cpp \
         ID.cpp \
         Infoledge.cpp \
-        Information.cpp \
-        Knowledge.cpp \
         Person.cpp \
         main.cpp
 

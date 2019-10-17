@@ -37,5 +37,5 @@ void Person::Print() {
     std::cout << std::endl;
 }
 /********************************************************/
-} /* namespace Infoledger_Person */
+} /* namespace Infoledger */
 /********************************************************/
