@@ -33,7 +33,10 @@ People &Person::operator+(Person &p) {
 /********************************************************/
 void Person::Print() {
     std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: ";
-    for(auto& print : data.list) std::cout << print->content << std::endl;
+    for(auto& print : data.list) {
+        print->Print();
+        std::cout << std::endl;
+    }
     std::cout << std::endl;
 }
 /********************************************************/

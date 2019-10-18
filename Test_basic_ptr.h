@@ -5,21 +5,15 @@
  *      Author: tzunami
  */
 
+#pragma once
+#ifndef TEST_BASIC_PTR_H_
+#define TEST_BASIC_PTR_H_
+
 #include <iostream> // Library to print to console
+#include "Test_basic.h"
 #include "Infoledger.h"
 
 using namespace Infoledger;
-
-void addNewDataPtr(People& p) {
-    std::string career[] = {"CEO", "Dentist", "Developer", "Doctor"};
-    unsigned int elm;
-    for(auto& person : p.list) {
-        elm = rand() % 4;
-        Knowledge* k = new Knowledge();
-        person->data.list.push_back(k);
-        person->data.list[person->data.list.size()-1]->content = career[elm];
-    }
-}
 
 int test_basic_ptr() {
     std::cout << "STARTING BASIC TEST...\n" << std::endl;
@@ -37,17 +31,17 @@ int test_basic_ptr() {
     /*****************************************************/
     // Person & People
     People ppl_1 = *bob + *frank + *sam + *alice;
-    addNewDataPtr(ppl_1);
+    addNewData(ppl_1);
     std::cout << "\nPeople ppl_1 = *bob + *frank + *sam + *alice;" << std::endl;
     ppl_1.Print();
 
     People ppl_2 = *sally + *alice + *mary;
-    addNewDataPtr(ppl_2);
+    addNewData(ppl_2);
     std::cout << "\nPeople ppl_2 = *sally + *alice + *mary;" << std::endl;
     ppl_2.Print();
 
     People ppl_3 = ppl_1 + ppl_2;
-    addNewDataPtr(ppl_3);
+    addNewData(ppl_3);
     std::cout << "\nPeople ppl_3 = ppl_1 + ppl_2;" << std::endl;
     ppl_3.Print();
 
@@ -186,10 +180,4 @@ int test_basic_ptr() {
     std::cout << "\nEND BASIC TEST...\n" << std::endl;
     return 0;
 }
-
-
-
-
-
-
-
+#endif /* TEST_BASIC_PTR_H_ */

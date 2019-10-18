@@ -1,5 +1,5 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += console c++1z
 CONFIG += thread
 CONFIG -= app_bundle
 CONFIG -= qt
@@ -16,6 +16,7 @@ DISTFILES += \
     README.md
 
 HEADERS += \
+    Content.h \
     Data.h \
     Database.h \
     IL.h \

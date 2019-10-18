@@ -5,19 +5,23 @@
  *      Author: tzunami
  */
 
+#pragma once
+#ifndef TEST_BASIC_H_
+#define TEST_BASIC_H_
+
 #include "Infoledger.h"
-#include <iostream> // Library to print to console
 
 using namespace Infoledger;
 
+Content content[] = {{"CEO"}, {"Dentist"}, {"Developer"}, {"Doctor"}};
+
 void addNewData(People& p) {
-    std::string career[] = {"CEO", "Dentist", "Developer", "Doctor"};
     unsigned int elm;
     for(auto& person : p.list) {
         elm = rand() % 4;
         Knowledge* k = new Knowledge();
         person->data.list.push_back(k);
-        person->data.list[person->data.list.size()-1]->content = career[elm];
+        person->data.list[person->data.list.size()-1]->content = &content[elm];
     }
 }
 
@@ -186,3 +190,4 @@ int test_basic() {
     std::cout << "\nEND BASIC TEST...\n" << std::endl;
     return 0;
 }
+#endif /* TEST_BASIC_H_ */

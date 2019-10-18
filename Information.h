@@ -1,5 +1,5 @@
 /*
- * Informationz.h
+ * Information.h
  *
  *  Created on: Dec 4, 2015
  *      Author: tzunami

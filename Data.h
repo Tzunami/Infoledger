@@ -8,7 +8,7 @@
 #ifndef DATA_H_
 #define DATA_H_
 
-#include <iostream> // can remove
+#include "Content.h"
 
 enum DataType {ERROR, INFORMATION, KNOWLEDGE};
 
@@ -19,12 +19,13 @@ public:
     // truple in the future
 	//constructors
     //Data();
-    Data(DataType datatype): type(datatype), content("") {}
-    Data(Data& d): type(d.type), content("") {}
-    //virtual ~Data() {}
+    Data(DataType datatype): type(datatype), content(nullptr), skill(0) {}
+    Data(Data& d): type(d.type), content(d.content), skill(0) {}
+    //virtual ~Data() {}    
+    void Print() {std::cout << "Type: " << type << ", Content: " << content->operator()() << ", Skill: " << skill;}
 
     DataType type;
-    std::string content;
+    Content* content;
     float skill;
 };
 /************************************/

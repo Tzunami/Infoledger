@@ -5,6 +5,9 @@
  *      Author: tzunami
  */
 
+#pragma once
+#ifndef TEST_PROCESS_H_
+#define TEST_PROCESS_H_
 
 #include "Infoledger.h"
 #include <iostream> // Library to print to console
@@ -14,7 +17,7 @@ using namespace Infoledger;
 void MyProcess(Infoledge &il, Person &person, Group &group) {
     std::cout<<"MyProcess(Person, Group)"<<std::endl;
     Knowledge *k = new Knowledge();
-    k->content = "Discovery";
+    k->content = new Content("Discovery");
     person.data.list.push_back(k);
     group.data.list.push_back(k);
     il.result = k;
@@ -100,7 +103,7 @@ int test_process() {
     std::cout << "\n\nEND TEST PROCESS...\n" << std::endl;
 	return 0;
 }
-
+#endif /* TEST_PROCESS_H_ */
 
 
 
