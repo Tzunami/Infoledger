@@ -13,7 +13,7 @@
 
 using namespace Infoledger;
 
-Content content[] = {{"CEO"}, {"Dentist"}, {"Developer"}, {"Doctor"}};
+static Content content[] = {{"CEO"}, {"Dentist"}, {"Developer"}, {"Doctor"}};
 
 void addNewData(People& p) {
     unsigned int elm;
@@ -27,7 +27,41 @@ void addNewData(People& p) {
     }
 }
 
-int test_basic() {
+class Test_Data {
+    public:
+        Test_Data(){}
+        Test_Data(Person &p1, Person &p2, Person &p3, Person &p4, Person &p5, Person &p6, Person &p7,
+                      People &pp1, People &pp2, People &pp3,
+                      Group &g1, Group &g2, Group &g3){
+            person[0] = &p1;
+            person[1] = &p2;
+            person[2] = &p3;
+            person[3] = &p4;
+            person[4] = &p5;
+            person[5] = &p6;
+            person[6] = &p7;
+            people[0] = &pp1;
+            people[1] = &pp2;
+            people[2] = &pp3;
+            group[0] = &g1;
+            group[1] = &g2;
+            group[2] = &g3;
+        }
+
+        bool operator!=(Test_Data& td) {
+            unsigned int counter = 0;
+            for(auto& p: td.person)
+                if(p != this->person[counter++])
+                    return false;
+            return true;
+        }
+    private:
+        Person* person[7];
+        People* people[3];
+        Group* group[3];
+};
+
+Test_Data test_basic() {
     //std::cout << "STARTING BASIC TEST...\n" << std::endl;
     /*****************************************************/
     //Testing initializing
@@ -190,6 +224,10 @@ int test_basic() {
 
     /************************* End ****************************/
    //std::cout <<  "\nEND BASIC TEST...\n" << std::endl;
-    return 0;
+    Test_Data td(pat, bob, frank, sam, alice, mary, sally,
+                     ppl_1, ppl_2, ppl_3,
+                     group_1, group_2, group_3);
+
+    return td;
 }
 #endif /* TEST_BASIC_H_ */

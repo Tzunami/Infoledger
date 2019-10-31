@@ -14,7 +14,7 @@
 
 using namespace Infoledger;
 
-int test_basic_ptr() {
+Test_Data test_basic_ptr() {
     // std::cout << "STARTING BASIC POINTER TEST...\n" << std::endl;
     /*****************************************************/
     //Testing initializing
@@ -177,6 +177,10 @@ int test_basic_ptr() {
 
     /************************* End ****************************/
     // std::cout << "\nEND BASIC POINTER TEST...\n" << std::endl;
-    return 0;
+
+    Test_Data td(*pat, *bob, *frank, *sam, *alice, *mary, *sally,
+                     *ppl_1, *ppl_2,* ppl_3,
+                     *group_1, *group_2, *group_3);
+    return td;
 }
 #endif /* TEST_BASIC_PTR_H_ */

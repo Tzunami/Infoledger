@@ -9,7 +9,7 @@
 #ifndef TEST_PROCESS_H_
 #define TEST_PROCESS_H_
 
-#include "Infoledger.h"
+#include "Test_basic.h"
 #include <iostream> // Library to print to console
 
 using namespace Infoledger;
@@ -23,7 +23,7 @@ void MyProcess(Infoledge &il, Person &person, Group &group) {
     il.result = k;
 }
 /*****************************************************/
-int test_process() {
+Test_Data test_process() {
    //  std::cout<<"------------------------------------- STARTING TEST PROCESS...\n"<<std::endl;
 
 	//Testing initializing
@@ -101,7 +101,11 @@ int test_process() {
 
 	/************************* End ****************************/
    //  std::cout << "\n\nEND TEST PROCESS...\n" << std::endl;
-	return 0;
+    Test_Data td(pat, bob, frank, sam, alice, mary, sally,
+                     ppl_1, ppl_2, ppl_3,
+                     group_A, group_B, group_C);
+
+    return td;
 }
 #endif /* TEST_PROCESS_H_ */
 

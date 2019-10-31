@@ -14,7 +14,7 @@
 
 using namespace Infoledger;
 /*****************************************************/
-int test_process_ptr() {
+Test_Data test_process_ptr() {
     // std::cout<<"------------------------------------- STARTING TEST POINTER PROCESS...\n"<<std::endl;
 
 	//Testing initializing
@@ -92,7 +92,11 @@ int test_process_ptr() {
 
 	/************************* End ****************************/
     // std::cout << "\n\nEND TEST PROCESS POINTER...\n" << std::endl;
-	return 0;
+
+    Test_Data td(*pat, *bob, *frank, *sam, *alice, *mary, *sally,
+                     *ppl_1, *ppl_2,* ppl_3,
+                     *group_A, *group_B, *group_C);
+    return td;
 }
 #endif /* TEST_PROCESS_PTR_H_ */
 
