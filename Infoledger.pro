@@ -33,4 +33,5 @@ HEADERS += \
     Person.h \
     Test_basic.h \
     Test_basic_ptr.h \
-    Test_process.h
+    Test_process.h \
+    Test_process_ptr.h
