@@ -14,6 +14,9 @@ std::vector<Data> Data::operator/(Data& d) const {
             vd.push_back(d);
             vd[0].skill = (this->skill < d.skill) ? this->skill : d.skill;
         }
+        else {
+            // return 2 datas
+        }
     }
     return vd;
 }
