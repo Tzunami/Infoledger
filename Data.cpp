@@ -1,4 +1,5 @@
 #include "Data.h"
+#include <math.h>
 
 namespace Infoledger {
 /*************************************************/
@@ -6,23 +7,26 @@ void Data::Print() {
     std::cout << "Type: " << type << ", Content: " << content->operator()() << ", Skill: " << skill;
 }
 /*************************************************/
-std::vector<Data> Data::operator/(Data& d) const {
-    // -- find common denominator; if none return
-    std::vector<Data> vd;
-    if(this->content==d.content) {
-        if(this->type==d.type) {
-            vd.push_back(d);
-            vd[0].skill = (this->skill < d.skill) ? this->skill : d.skill;
-        }
-        else {
-            // return 2 datas
-        }
+Data Data::operator/(Data& d) {
+    // common denominator
+    if ((this->type==d.type)&&(this->content==d.content)) {
+        Data data = *this;
+        data = *this;
+        data.skill = (this->skill < d.skill) ? this->skill : d.skill;
+        return data;
     }
-    return vd;
+    return Data(DataType::ERROR);
 }
 /*************************************************/
-std::vector<Data> Data::operator*(Data& d) const {
-
+Data Data::operator*(Data& d) {
+    if ((this->type==d.type)&&(this->content==d.content)) {
+        Data data = *this;
+        data = *this;
+        auto skill = (this->skill < d.skill) ? this->skill+sqrt(this->skill-d.skill) : d.skill+sqrt(d.skill-this->skill);
+        data.skill = skill;
+        return data;
+    }
+    return Data(DataType::ERROR);
 }
 /*************************************************/
 }

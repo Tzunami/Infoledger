@@ -14,31 +14,31 @@ namespace Infoledger {
 /*************************************************************************************/
 class Group: public ID, public People {
 public:
-	//members
+    // members
     List<Data> data;
-	//constructors
+    // constructors
     Group();
     Group(People *pl);
     Group(People &pl);
     Group(Person &p1, Person &p2);
     Group(Person &p1, Person &p2, std::string n);
     virtual ~Group();
-	//operators Person
+    // operators Person
     Group &operator+(Person &p);
     Group &operator-(Person &p);
     Group &operator+=(Person &p);
     Group &operator-=(Person &p);
-	//operators People Equal
+    // operators People Equal
     Group &operator=(People &p);
     Group &operator=(People *p);
-	//operators People
+    // operators People
     Group &operator+(People &p);
     Group &operator-(People &p);
     Group &operator+=(People &p);
     Group &operator+=(People *p);
     Group &operator-=(People &p);
     Group &operator-=(People *p);
-    //operators Group
+    // operators Group
     Group &operator=(Group &g);
     Group &operator=(Group *g);
     Group &operator+(Group &g);
@@ -47,6 +47,12 @@ public:
     Group &operator+=(Group *g);
     Group &operator-=(Group &g);
     Group &operator-=(Group *g);
+    //operators Group
+    Group &operator/(Group &g);
+    Group &operator/(Group *g);
+    Group &operator*(Group &g);
+    Group &operator*(Group *g);
+
 };
 /********************************************/
 } /* namespace Infoledger */

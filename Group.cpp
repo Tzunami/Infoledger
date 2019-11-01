@@ -151,4 +151,16 @@ Group &Group::operator-=(Group *g){
     return *this;
 }
 /*********************************************************/
+Group &Group::operator/(Group &g) {
+    People *pl=&People::operator+(g);
+    Group* group=new Group(pl);
+    return *group;
+}
+/*********************************************************/
+//Group &operator/(Group *g);
+/*********************************************************/
+//Group &operator*(Group &g);
+/*********************************************************/
+//Group &operator*(Group *g);
+/*********************************************************/
 } /* namespace Infoledger */
