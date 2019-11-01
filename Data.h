@@ -8,11 +8,13 @@
 #ifndef DATA_H_
 #define DATA_H_
 
+#include <vector>
 #include "Content.h"
 
 enum DataType {ERROR, INFORMATION, KNOWLEDGE};
 
 namespace Infoledger {
+struct DblData;
 /************************************/
 class Data {
 public:
@@ -20,9 +22,13 @@ public:
 	//constructors
     //Data();
     Data(DataType datatype): type(datatype), content(nullptr), skill(0) {}
+    Data(DataType datatype, float skl): type(datatype), content(nullptr), skill(skl) {}
     Data(Data& d): type(d.type), content(d.content), skill(0) {}
     //virtual ~Data() {}    
-    void Print() {std::cout << "Type: " << type << ", Content: " << content->operator()() << ", Skill: " << skill;}
+    void Print();
+
+    std::vector<Data> operator/(Data& d) const;
+    std::vector<Data> operator*(Data& d) const;
 
     DataType type;
     Content* content;

@@ -97,8 +97,8 @@ Test_Data test_basic() {
 
     People ppl_3 = ppl_1 + ppl_2;
     addNewData(ppl_3);
-   //std::cout <<  "People ppl_3 = ppl_1 + ppl_2;" << std::endl;
-    ////ppl_3.Print();
+    // std::cout <<  "People ppl_3 = ppl_1 + ppl_2;" << std::endl;
+    // ppl_3.Print();
 
    //std::cout <<  "\nppl_2 += pat;" << std::endl;
     ppl_2 += pat;
