@@ -27,8 +27,8 @@ public:
     //virtual ~Data() {}    
     void Print();
 
-    std::vector<Data> operator/(Data& d) const;
-    std::vector<Data> operator*(Data& d) const;
+    Data operator/(Data& d);
+    Data operator*(Data& d);
 
     DataType type;
     Content* content;
