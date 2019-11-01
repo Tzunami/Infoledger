@@ -27,10 +27,12 @@ int main() {
         for(unsigned int b=a+1; b<counter; b++) {
             if(td[a] != td[b]) {
                 std::cout << a << " != " << b << std::endl;
+                td[a].Print();
+                td[b].Print();
             } // end if
         } // end for
     } // end for
-
+    std::cout << "End\n";
 	return 0;
 }
 
