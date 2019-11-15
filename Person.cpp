@@ -38,11 +38,17 @@ Person &Person::operator*(Person &p) {
     return *person;
 }
 /********************************************************/
-Person &Person::operator/(Person &p) {
-    Person* person = new Person(*this);
-    if(*this == p) return *person;
-    person->data/= p.data;
-    return *person;
+People &Person::operator/(Person &p) {
+    People* people = new People;
+    people->list.push_back(this);
+    if(*this == p) return *people;
+    for(auto& person : people->list) {
+        for(auto& data_elm : person->data.list) {
+            (data_elm->type == p.data.list[0]->type)
+            people->list[0]->data.list[0]->operator/=(*p.data.list[0]);
+        }
+    }
+    return *people;
 }
 /********************************************************/
 void Person::Print() {

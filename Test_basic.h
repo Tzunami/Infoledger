@@ -233,8 +233,8 @@ Test_Data test_basic() {
     group_1 -= group_2 - bob - alice;
     // group_1.Print();
     /************* operators divide & multiply ****************/
-    pat = bob * sally;
-    pat = sally / bob;
+    //pat = bob * sally;
+    //pat = sally / bob;
     /************************* End ****************************/
    //std::cout <<  "\nEND BASIC TEST...\n" << std::endl;
     Test_Data td(pat, bob, frank, sam, alice, mary, sally,

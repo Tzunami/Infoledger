@@ -24,21 +24,18 @@ public:
     List<T>(T& t);
     virtual ~List<T>(){}
 
-    //operators T
+    // operators
     List<T> &operator+(T& p);
     List<T> &operator-(T& p);
     void operator+=(T& p);
     void operator-=(T& p);
 
-    //operators List<T>
     List<T> &operator=(List<T>* p);
     List<T> &operator=(List<T>& p);
 
-    //List<T> &operator+(List<T> *p);
     List<T> &operator+(List<T>& p);
     List<T> &operator-(List<T>& p);
 
-    //List<T> &operator-(List<T> *p);
     void operator+=(List<T>* p);
     void operator+=(List<T>& p);
     void operator-=(List<T>* p);

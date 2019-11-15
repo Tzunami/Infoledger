@@ -29,9 +29,7 @@ public:
     bool operator==(Person &p) const;
     People &operator+(Person &p);
     Person &operator*(Person &p);
-    Person &operator/(Person &p);
-    //void operator*=(Person &p);
-    //void operator/=(Person &p);
+    People &operator/(Person &p);
 
     List<Data> data;
     void Print();
