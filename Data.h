@@ -27,9 +27,14 @@ public:
     //virtual ~Data() {}    
     void Print();
 
+<<<<<<< HEAD
     Data &operator=(Data& d);
     Data &operator/(Data& d);
     Data &operator*(Data& d);
+=======
+    Data operator/(Data& d);
+    Data operator*(Data& d);
+>>>>>>> cbf14ce8b98394d63a078c91818b0240a3230723
 
     DataType type;
     Content* content;
