@@ -26,27 +26,27 @@ public:
     // operators Person
     Group &operator+(Person &p);
     Group &operator-(Person &p);
-    Group &operator+=(Person &p);
-    Group &operator-=(Person &p);
+    void operator+=(Person &p);
+    void operator-=(Person &p);
     // operators People Equal
     Group &operator=(People &p);
     Group &operator=(People *p);
     // operators People
     Group &operator+(People &p);
     Group &operator-(People &p);
-    Group &operator+=(People &p);
-    Group &operator+=(People *p);
-    Group &operator-=(People &p);
-    Group &operator-=(People *p);
+    void operator+=(People &p);
+    void operator+=(People *p);
+    void operator-=(People &p);
+    void operator-=(People *p);
     // operators Group
     Group &operator=(Group &g);
     Group &operator=(Group *g);
     Group &operator+(Group &g);
     Group &operator-(Group &g) ;
-    Group &operator+=(Group &g);
-    Group &operator+=(Group *g);
-    Group &operator-=(Group &g);
-    Group &operator-=(Group *g);
+    void operator+=(Group &g);
+    void operator+=(Group *g);
+    void operator-=(Group &g);
+    void operator-=(Group *g);
     //operators Group
     Group &operator/(Group &g);
     Group &operator/(Group *g);

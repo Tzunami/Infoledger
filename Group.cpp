@@ -54,14 +54,12 @@ Group &Group::operator-(Person &p) {
 }
 //operators People Equal
 /*********************************************************/
-Group &Group::operator+=(Person &p) {
+void Group::operator+=(Person &p) {
     People::operator+=(p);
-    return *this;
 }
 /*********************************************************/
-Group &Group::operator-=(Person &p) {
+void Group::operator-=(Person &p) {
     People::operator-=(p);
-    return *this;
 }
 /*********************************************************/
 //operators People Equal
@@ -89,24 +87,20 @@ Group &Group::operator-(People &p) {
     return *group;
 }
 /*********************************************************/
-Group &Group::operator+=(People &p){
+void Group::operator+=(People &p){
     People::operator+=(p);
-    return *this;
 }
 /*********************************************************/
-Group &Group::operator+=(People *p){
+void Group::operator+=(People *p){
     People::operator+=(p);
-    return *this;
 }
 /*********************************************************/
-Group &Group::operator-=(People &p){
+void Group::operator-=(People &p){
     People::operator-=(p);
-    return *this;
 }
 /*********************************************************/
-Group &Group::operator-=(People *p){
+void Group::operator-=(People *p){
     People::operator-=(p);
-    return *this;
 }
 /*********************************************************/
 //operators Group
@@ -132,23 +126,20 @@ Group &Group::operator-(Group &g) {
     return *group;
 }
 /*********************************************************/
-Group &Group::operator+=(Group &g){
+void Group::operator+=(Group &g){
     People::operator+=(g);
-    return *this;}
-/*********************************************************/
-Group &Group::operator+=(Group *g){
-    People::operator+=(g);
-    return *this;
 }
 /*********************************************************/
-Group &Group::operator-=(Group &g){
-    People::operator-=(g);
-    return *this;
+void Group::operator+=(Group *g){
+    People::operator+=(g);
 }
 /*********************************************************/
-Group &Group::operator-=(Group *g){
+void Group::operator-=(Group &g){
     People::operator-=(g);
-    return *this;
+}
+/*********************************************************/
+void Group::operator-=(Group *g){
+    People::operator-=(g);
 }
 /*********************************************************/
 Group &Group::operator/(Group &g) {
