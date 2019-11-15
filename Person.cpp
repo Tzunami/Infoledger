@@ -42,12 +42,11 @@ People &Person::operator/(Person &p) {
     People* people = new People;
     people->list.push_back(this);
     if(*this == p) return *people;
-    for(auto& person : people->list) {
-        for(auto& data_elm : person->data.list) {
-            (data_elm->type == p.data.list[0]->type)
-            people->list[0]->data.list[0]->operator/=(*p.data.list[0]);
-        }
-    }
+    for(auto& person : people->list)
+        for(auto& data_elm : person->data.list)
+            for(auto& data_compare : p.data.list)
+                // (data_elm->type == p.data.list[0]->type)
+                data_elm->operator/=(*data_compare);
     return *people;
 }
 /********************************************************/

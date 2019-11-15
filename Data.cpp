@@ -43,17 +43,17 @@ void Data::operator/=(Data& d) {
     // common denominator
     if ((this->type==d.type)&&(this->content==d.content)) {
         if(this->skill < d.skill) this->skill = d.skill;
-    } else {
+    } /*else {
         this->type = DataType::ERROR;
-    }
+    }*/
 }
 /*************************************************/
 void Data::operator*=(Data& d) {
     if ((this->type==d.type)&&(this->content==d.content)) {
         this->skill = (this->skill < d.skill) ? this->skill+std::sqrt(d.skill) : d.skill+std::sqrt(this->skill);
-    } else {
+    } /*else {
         this->type = DataType::ERROR;
-    }
+    }*/
 }
 /*************************************************/
 }
