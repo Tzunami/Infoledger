@@ -85,6 +85,8 @@ Test_Data test_basic() {
     Person sally("Sally");
     /*****************************************************/
     // Person & People
+    pat.data.list[0]->content = &content[0];
+
     People ppl_1 = bob + frank + sam + alice;
     addNewData(ppl_1);
    //std::cout <<  "People ppl_1 = bob + frank + sam + alice;" << std::endl;
@@ -230,7 +232,9 @@ Test_Data test_basic() {
    //std::cout <<  "\ngroup_1 -= group_2 - bob - alice;" << std::endl;
     group_1 -= group_2 - bob - alice;
     // group_1.Print();
-
+    /************* operators divide & multiply ****************/
+    pat = bob * sally;
+    pat = sally / bob;
     /************************* End ****************************/
    //std::cout <<  "\nEND BASIC TEST...\n" << std::endl;
     Test_Data td(pat, bob, frank, sam, alice, mary, sally,

@@ -20,8 +20,7 @@ namespace Infoledger {
 
 /***************************************/
 class Person: public ID {
-public:
-    List<Data> data;
+public:    
     // constructor
     Person(std::string n);
     Person(std::string n, List<Data> d);
@@ -29,6 +28,10 @@ public:
     //operators
     bool operator==(Person &p) const;
     People &operator+(Person &p);
+    Person &operator*(Person &p);
+    Person &operator/(Person &p);
+
+    List<Data> data;
     void Print();
 };
 /*********************************************/

@@ -31,6 +31,20 @@ People &Person::operator+(Person &p) {
     return *people;
 }
 /********************************************************/
+Person &Person::operator*(Person &p) {
+    Person* person = new Person(*this);
+    if(*this == p) return *person;
+    person->data+= p.data;
+    return *person;
+}
+/********************************************************/
+Person &Person::operator/(Person &p) {
+    Person* person = new Person(*this);
+    if(*this == p) return *person;
+    person->data /= p.data;
+    return *person;
+}
+/********************************************************/
 void Person::Print() {
     std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: ";
     for(auto& print : data.list) {

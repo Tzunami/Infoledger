@@ -40,6 +40,8 @@ Test_Data test_process() {
 	/*****************************************************/
     //std::cout<<"\nInitializing People NOT Type A"<<std::endl;
 	// Person & People
+    pat.data.list[0]->content = &content[0];
+
 	People ppl_1 = bob + frank + sam + alice;
 	People ppl_2 = sally + alice + mary;
 	People ppl_3 = ppl_1 + ppl_2;

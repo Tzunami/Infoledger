@@ -29,6 +29,8 @@ Test_Data test_basic_ptr() {
     Person* sally = new Person("Sally");
     /*****************************************************/
     // Person & People
+    pat->data.list[0]->content = &content[0];
+
     People* ppl_1 = new People(*bob + *frank + *sam + *alice);
     addNewData(*ppl_1);
     // std::cout << "\nPeople ppl_1 = *bob + *frank + *sam + *alice;" << std::endl;
