@@ -30,6 +30,8 @@ public:
     Data &operator=(Data& d);
     Data &operator/(Data& d);
     Data &operator*(Data& d);
+    void operator/=(Data& d);
+    void operator*=(Data& d);
 
     DataType type;
     Content* content;

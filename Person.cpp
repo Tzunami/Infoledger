@@ -41,7 +41,7 @@ Person &Person::operator*(Person &p) {
 Person &Person::operator/(Person &p) {
     Person* person = new Person(*this);
     if(*this == p) return *person;
-    person->data /= p.data;
+    person->data/= p.data;
     return *person;
 }
 /********************************************************/

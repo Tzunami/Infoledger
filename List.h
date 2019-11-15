@@ -27,8 +27,8 @@ public:
     //operators T
     List<T> &operator+(T& p);
     List<T> &operator-(T& p);
-    List<T> &operator+=(T& p);
-    List<T> &operator-=(T& p);
+    void operator+=(T& p);
+    void operator-=(T& p);
 
     //operators List<T>
     List<T> &operator=(List<T>* p);
@@ -39,10 +39,10 @@ public:
     List<T> &operator-(List<T>& p);
 
     //List<T> &operator-(List<T> *p);
-    List<T> &operator+=(List<T>* p);
-    List<T> &operator+=(List<T>& p);
-    List<T> &operator-=(List<T>* p);
-    List<T> &operator-=(List<T>& p);
+    void operator+=(List<T>* p);
+    void operator+=(List<T>& p);
+    void operator-=(List<T>* p);
+    void operator-=(List<T>& p);
 
     //function
 	void Print();
@@ -77,18 +77,16 @@ List<T> &List<T>::operator-(T& p) {
 }
 /********************************************/
 template <class T>
-List<T> &List<T>::operator+=(T& p) {
+void List<T>::operator+=(T& p) {
     unsigned int duplicate = GetDuplicate(p);
-    if(duplicate) return *this;
+    if(duplicate) return;
     list.push_back(&p);
-    return *this;
 }
 /********************************************/
 template <class T>
-List<T> &List<T>::operator-=(T& p) {
+void List<T>::operator-=(T& p) {
     unsigned int remove = GetDuplicate(p);
     if(remove--) list.erase(list.begin() + remove);
-    return *this;
 }
 //operators List<T>
 /********************************************/
@@ -124,30 +122,26 @@ List<T> &List<T>::operator-(List<T>& p) {
 }
 /********************************************/
 template <class T>
-List<T> &List<T>::operator+=(List<T>* p) {
+void List<T>::operator+=(List<T>* p) {
     RemoveDuplicate(*p);
     this->list.insert(this->list.end(), p->list.begin(), p->list.end());
-    return *this;
 }
 /********************************************/
 template <class T>
-List<T> &List<T>::operator+=(List<T>& p) {
+void List<T>::operator+=(List<T>& p) {
     RemoveDuplicate(p);
     list.insert(list.end(), p.list.begin(), p.list.end());
-    return *this;
 }
 
 /********************************************/
 template <class T>
-List<T> &List<T>::operator-=(List<T>* p) {
+void List<T>::operator-=(List<T>* p) {
     RemoveDuplicate(*p);
-    return *this;
 }
 /********************************************/
 template <class T>
-List<T> &List<T>::operator-=(List<T>& p) {
+void List<T>::operator-=(List<T>& p) {
     RemoveDuplicate(p);
-    return *this;
 }
 /********************************************/
 template <class T>

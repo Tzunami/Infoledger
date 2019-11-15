@@ -30,6 +30,8 @@ public:
     People &operator+(Person &p);
     Person &operator*(Person &p);
     Person &operator/(Person &p);
+    //void operator*=(Person &p);
+    //void operator/=(Person &p);
 
     List<Data> data;
     void Print();
