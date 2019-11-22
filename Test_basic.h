@@ -71,7 +71,8 @@ class Test_Data {
 };
 
 Test_Data test_basic() {
-    std::cout << "STARTING BASIC TEST...\n" << std::endl;
+    std::cout << "STARTING BASIC TEST..." << std::endl;
+    std::cout << "Data Types: 0=ERROR, 1=INFORMATION, 2=KNOWLEDGE" << std::endl;
     /*****************************************************/
     //Testing initializing
     std::cout << "Initializing People & Data" << std::endl;
@@ -85,18 +86,14 @@ Test_Data test_basic() {
     Person sally("Sally");
     /*****************************************************/
     // Person & People
-    //content[0]->Print();
-    //pat.data.list[0]->content = content[0];
-    //content[0]->Print();
-
     People ppl_1 = bob + frank + sam + alice;
     addNewData(ppl_1);
     std::cout <<  "\nPeople ppl_1 = bob + frank + sam + alice;" << std::endl;
     ppl_1.Print();
 
-    People ppl_2 = sally + alice + mary;
+    People ppl_2 = sally + alice + mary + pat;
     addNewData(ppl_2);
-    std::cout <<  "\nPeople ppl_2 = sally + alice + mary;" << std::endl;
+    std::cout <<  "\nPeople ppl_2 = sally + alice + mary + pat;" << std::endl;
     ppl_2.Print();
 
     People ppl_3 = ppl_1 + ppl_2;
@@ -104,8 +101,8 @@ Test_Data test_basic() {
     std::cout <<  "\nPeople ppl_3 = ppl_1 + ppl_2;" << std::endl;
     ppl_3.Print();
 
-    std::cout <<  "\nppl_2 += pat;" << std::endl;
-    ppl_2 += pat;
+    std::cout <<  "\nppl_2 += bob;" << std::endl;
+    ppl_2 += bob;
     ppl_2.Print();
 
     std::cout <<  "\nppl_2 -= pat;" << std::endl;
@@ -155,30 +152,30 @@ Test_Data test_basic() {
     Group group_2(sally, sam, "\nGroup Two");
     group_2.Print();
 
-    std::cout <<  "\nGroup group_3(bob, frank, Group Three);" << std::endl;
+    std::cout <<  "\nGroup group_3(bob, frank, Group Three)" << std::endl;
     Group group_3(bob, frank, "\nGroup Three");
     group_3.Print();
 
     /*****************************************************/
     std::cout <<  "\nGroup & Person" << std::endl;
 
-    std::cout <<  "\nGroup_1 = group_1 + bob;" << std::endl;
+    std::cout <<  "\nGroup_1 = group_1 + bob" << std::endl;
     group_1 = group_1 + bob;
     group_1.Print();
 
-    std::cout <<  "\nGroup_1 = group_1 - bob;" << std::endl;
+    std::cout <<  "\nGroup_1 = group_1 - bob" << std::endl;
     group_1 = group_1 - bob;
     group_1.Print();
 
-    std::cout <<  "\nGroup_1 += sam;" << std::endl;
+    std::cout <<  "\nGroup_1 += sam" << std::endl;
     group_1 += sam;
     group_1.Print();
 
-    std::cout <<  "\nGroup_1 -= sam;" << std::endl;
+    std::cout <<  "\nGroup_1 -= sam" << std::endl;
     group_1 -= sam;
     group_1.Print();
 
-    std::cout <<  "\nGroup_1 = ppl_3;" << std::endl;
+    std::cout <<  "\nGroup_1 = ppl_3" << std::endl;
     group_1 = ppl_3;
     group_1.Print();
     /*****************************************************/
@@ -235,9 +232,15 @@ Test_Data test_basic() {
     group_1 -= group_2 - bob - alice;
     group_1.Print();
     /************* operators divide & multiply ****************/
-    //pat = bob * sally;
-    //pat.Print();
-    //pat = sally / bob;
+    std::cout <<  "\noperators divide & multiply" << std::endl;
+\
+    std::cout <<  "\npat = bob * sally" << std::endl;
+    pat = bob * sally;
+    pat.Print();
+
+    std::cout <<  "\ngroup_2 = sally / bob" << std::endl;
+    group_2 = sally / bob;
+    group_2.Print();
     /************************* End ****************************/
     std::cout <<  "END BASIC TEST...\n" << std::endl;
     Test_Data td(pat, bob, frank, sam, alice, mary, sally,
