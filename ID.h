@@ -25,8 +25,8 @@ protected:
     ID(): name(""), id(id_counter++) {}
 
 private:
-    std::string name;
-    unsigned int id;
+    const std::string name;
+    const unsigned int id;
     static unsigned int id_counter;
 };
 /***************************************************************/

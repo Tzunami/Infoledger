@@ -22,11 +22,12 @@ namespace Infoledger {
 class Person: public ID {
 public:    
     // constructor
-    Person(std::string n);
-    Person(std::string n, List<Data> d);
+    Person(std::string name);
+    Person(std::string name, List<Data> d);
     //virtual ~Person() {}
     //operators
     bool operator==(Person &p) const;
+    Person &operator=(Person &p);
     People &operator+(Person &p);
     Person &operator*(Person &p);
     People &operator/(Person &p);

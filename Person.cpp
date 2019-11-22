@@ -9,11 +9,11 @@
 
 namespace Infoledger {
 /********************************************************/
-Person::Person(std::string n): ID(n) {
+Person::Person(std::string name): ID(name) {
     //std::cout<<"Person Constructor, Name: "<<name<<std::endl;
 }
 /********************************************************/
-Person::Person(std::string n, List<Data> d): ID(n), data(d) {
+Person::Person(std::string name, List<Data> d): ID(name), data(d) {
     //std::cout<<"Person Constructor"<<std::endl;
 }
 /********************************************************/
@@ -31,8 +31,15 @@ People &Person::operator+(Person &p) {
     return *people;
 }
 /********************************************************/
+Person &Person::operator=(Person &p) {
+    if(this == &p) return *this;
+    this->data.list = p.data.list;
+    return *this;
+}
+/********************************************************/
 Person &Person::operator*(Person &p) {
-    Person* person = new Person(*this);
+    const std::string name = "_"+ this->GetName() + p.GetName();
+    Person* person = new Person(name, this->data);
     if(*this == p) return *person;
     person->data+= p.data;
     return *person;
