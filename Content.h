@@ -20,7 +20,7 @@ public:
     Content(std::string c): content(c) {}
     //virtual ~Content() {}
     std::string operator()() const { return content; }
-    void Print() { std::cout << "Content "; }
+    void Print() { std::cout << "Content: " << content; }
 private:
     std::string content;
 };

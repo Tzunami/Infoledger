@@ -19,6 +19,7 @@ int main() {
     Test_Data td[4];
 
     td[counter++] = test_basic();
+    /*
     td[counter++] = test_basic_ptr();
     td[counter++] = test_process();
     td[counter++] = test_process_ptr();
@@ -32,6 +33,8 @@ int main() {
             } // end if
         } // end for
     } // end for
+
+    */
     std::cout << "End\n";
 	return 0;
 }

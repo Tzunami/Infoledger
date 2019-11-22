@@ -29,7 +29,7 @@ Test_Data test_basic_ptr() {
     Person* sally = new Person("Sally");
     /*****************************************************/
     // Person & People
-    pat->data.list[0]->content = &content[0];
+    pat->data.list[0]->content = content[0];
 
     People* ppl_1 = new People(*bob + *frank + *sam + *alice);
     addNewData(*ppl_1);
@@ -179,7 +179,7 @@ Test_Data test_basic_ptr() {
 
     /************************* End ****************************/
     // std::cout << "\nEND BASIC POINTER TEST...\n" << std::endl;
-
+    pat->Print();
     Test_Data td(*pat, *bob, *frank, *sam, *alice, *mary, *sally,
                      *ppl_1, *ppl_2,* ppl_3,
                      *group_1, *group_2, *group_3);

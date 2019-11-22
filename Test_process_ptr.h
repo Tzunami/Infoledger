@@ -31,7 +31,7 @@ Test_Data test_process_ptr() {
 	/*****************************************************/
     // std::cout<<"\nInitializing People NOT Type A"<<std::endl;
 	// Person & People
-    pat->data.list[0]->content = &content[0];
+    pat->data.list[0]->content = content[0];
 
     People* ppl_1 = new People(*bob + *frank + *sam + *alice);
     People* ppl_2 = new People(*sally + *alice + *mary);

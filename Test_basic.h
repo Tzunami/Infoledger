@@ -13,7 +13,7 @@
 
 using namespace Infoledger;
 
-static Content content[] = {{"CEO"}, {"Dentist"}, {"Developer"}, {"Doctor"}};
+Content* content[] = {new Content("CEO"), new Content("Dentist"), new Content("Developer"), new Content("Doctor")};
 
 void addNewData(People& p) {
     unsigned int elm;
@@ -22,7 +22,7 @@ void addNewData(People& p) {
             elm = rand() % 4;
             Knowledge* k = new Knowledge();
             person->data.list.push_back(k);
-            person->data.list[person->data.list.size()-1]->content = &content[elm];
+            person->data.list[person->data.list.size()-1]->content = content[elm];
         }
     }
 }
@@ -32,7 +32,7 @@ class Test_Data {
         Test_Data(){}
         Test_Data(Person &p1, Person &p2, Person &p3, Person &p4, Person &p5, Person &p6, Person &p7,
                       People &pp1, People &pp2, People &pp3,
-                      Group &g1, Group &g2, Group &g3){
+                      Group &g1, Group &g2, Group &g3) {
             *person[0] = p1;
             *person[1] = p2;
             *person[2] = p3;
@@ -71,10 +71,10 @@ class Test_Data {
 };
 
 Test_Data test_basic() {
-    //std::cout << "STARTING BASIC TEST...\n" << std::endl;
+    std::cout << "STARTING BASIC TEST...\n" << std::endl;
     /*****************************************************/
     //Testing initializing
-    //std::cout << "Initializing People & Data" << std::endl;
+    std::cout << "Initializing People & Data" << std::endl;
     // Type B
     Person pat("Pat");
     Person bob("Bob");
@@ -85,158 +85,161 @@ Test_Data test_basic() {
     Person sally("Sally");
     /*****************************************************/
     // Person & People
-    pat.data.list[0]->content = &content[0];
+    //content[0]->Print();
+    //pat.data.list[0]->content = content[0];
+    //content[0]->Print();
 
     People ppl_1 = bob + frank + sam + alice;
     addNewData(ppl_1);
-   //std::cout <<  "People ppl_1 = bob + frank + sam + alice;" << std::endl;
-    //ppl_1.Print();
+    std::cout <<  "\nPeople ppl_1 = bob + frank + sam + alice;" << std::endl;
+    ppl_1.Print();
 
     People ppl_2 = sally + alice + mary;
     addNewData(ppl_2);
-   //std::cout <<  "People ppl_2 = sally + alice + mary;" << std::endl;
-    //ppl_2.Print();
+    std::cout <<  "\nPeople ppl_2 = sally + alice + mary;" << std::endl;
+    ppl_2.Print();
 
     People ppl_3 = ppl_1 + ppl_2;
     addNewData(ppl_3);
-    // std::cout <<  "People ppl_3 = ppl_1 + ppl_2;" << std::endl;
-    // ppl_3.Print();
+    std::cout <<  "\nPeople ppl_3 = ppl_1 + ppl_2;" << std::endl;
+    ppl_3.Print();
 
-   //std::cout <<  "\nppl_2 += pat;" << std::endl;
+    std::cout <<  "\nppl_2 += pat;" << std::endl;
     ppl_2 += pat;
-    //ppl_2.Print();
+    ppl_2.Print();
 
-   //std::cout <<  "ppl_2 -= pat;" << std::endl;
+    std::cout <<  "\nppl_2 -= pat;" << std::endl;
     ppl_2 -= pat;
-    //ppl_2.Print();
+    ppl_2.Print();
 
-   //std::cout <<  "ppl_2 += ppl_1;" << std::endl;
+    std::cout <<  "\nppl_2 += ppl_1;" << std::endl;
     ppl_2 += ppl_1;
-    //ppl_2.Print();
+    ppl_2.Print();
 
-   //std::cout <<  "ppl_2 -= ppl_1" << std::endl;
+    std::cout <<  "\nppl_2 -= ppl_1" << std::endl;
     ppl_2 -= ppl_1;
-    //ppl_2.Print();
+    ppl_2.Print();
 
-   //std::cout <<  "\nppl_1" << std::endl;
-    //ppl_1.Print();
+    std::cout <<  "\nppl_1" << std::endl;
+    ppl_1.Print();
 
-   //std::cout <<  "\nppl_2 += ppl_1 + alice - bob;" << std::endl;
+    std::cout <<  "\nppl_2 += ppl_1 + alice - bob;" << std::endl;
     ppl_2 += ppl_1 + alice - bob;
-    //ppl_2.Print();
-   //std::cout <<  "\nppl_1" << std::endl;
-    //ppl_1.Print();
+    ppl_2.Print();
+    std::cout <<  "\nppl_1" << std::endl;
+    ppl_1.Print();
 
-   //std::cout <<  "\nReset ppl_1 = alice + mary;" << std::endl;
+    std::cout <<  "Reset ppl_1 = alice + mary;" << std::endl;
     ppl_1 = alice + mary;
-    //ppl_1.Print();
-   //std::cout <<  "\nppl_2 -= ppl_1 - sam;" << std::endl;
+    ppl_1.Print();
+    std::cout <<  "\nppl_2 -= ppl_1 - sam;" << std::endl;
     ppl_2 -= ppl_1 - sam;
-    //ppl_2.Print();
-   //std::cout <<  "\nppl_1" << std::endl;
-    //ppl_1.Print();
+    ppl_2.Print();
+    std::cout <<  "\nppl_1" << std::endl;
+    ppl_1.Print();
     /*****************************************************/
-   //std::cout <<  "\nPeople" << std::endl;
+    std::cout <<  "\nPeople" << std::endl;
 
-   //std::cout <<  "\nppl_3 = ppl_1 - ppl_2" << std::endl;
+    std::cout <<  "\nppl_3 = ppl_1 - ppl_2" << std::endl;
     ppl_3 = ppl_1 - ppl_2;
-    //ppl_3.Print();
+    ppl_3.Print();
 
     /*****************************************************/
-   //std::cout <<  "\nInitialize Group (Requires 2 Person(s))" << std::endl;
+    std::cout <<  "Initialize Group (Requires 2 Person(s))" << std::endl;
 
-   //std::cout <<  "\nGroup group_1(alice, mary, Group One);" << std::endl;
-    Group group_1(alice, mary, "Group One");
-    // group_1.Print();
+    std::cout <<  "\nGroup group_1(alice, mary, Group One);" << std::endl;
+    Group group_1(alice, mary, "\nGroup One");
+    group_1.Print();
 
-   //std::cout <<  "\nGroup group_2(sally, sam, Group Two);" << std::endl;
-    Group group_2(sally, sam, "Group Two");
-    // group_2.Print();
+    std::cout <<  "\nGroup group_2(sally, sam, Group Two);" << std::endl;
+    Group group_2(sally, sam, "\nGroup Two");
+    group_2.Print();
 
-   //std::cout <<  "\nGroup group_3(bob, frank, Group Three);" << std::endl;
-    Group group_3(bob, frank, "Group Three");
-    // group_3.Print();
+    std::cout <<  "\nGroup group_3(bob, frank, Group Three);" << std::endl;
+    Group group_3(bob, frank, "\nGroup Three");
+    group_3.Print();
 
     /*****************************************************/
-   //std::cout <<  "\nGroup & Person" << std::endl;
+    std::cout <<  "\nGroup & Person" << std::endl;
 
-   //std::cout <<  "\ngroup_1 = group_1 + bob;" << std::endl;
+    std::cout <<  "\nGroup_1 = group_1 + bob;" << std::endl;
     group_1 = group_1 + bob;
-    // group_1.Print();
+    group_1.Print();
 
-   //std::cout <<  "\ngroup_1 = group_1 - bob;" << std::endl;
+    std::cout <<  "\nGroup_1 = group_1 - bob;" << std::endl;
     group_1 = group_1 - bob;
-    // group_1.Print();
+    group_1.Print();
 
-   //std::cout <<  "\ngroup_1 += sam;" << std::endl;
+    std::cout <<  "\nGroup_1 += sam;" << std::endl;
     group_1 += sam;
-    // group_1.Print();
+    group_1.Print();
 
-   //std::cout <<  "\ngroup_1 -= sam;" << std::endl;
+    std::cout <<  "\nGroup_1 -= sam;" << std::endl;
     group_1 -= sam;
-    // group_1.Print();
+    group_1.Print();
 
-   //std::cout <<  "\ngroup_1 = ppl_3;" << std::endl;
+    std::cout <<  "\nGroup_1 = ppl_3;" << std::endl;
     group_1 = ppl_3;
-    // group_1.Print();
+    group_1.Print();
     /*****************************************************/
-   //std::cout <<  "\nGroup, Person(s), & People" << std::endl;
+    std::cout <<  "\nGroup, Person(s), & People" << std::endl;
 
-   //std::cout <<  "\ngroup_1 += sam + bob;" << std::endl;
+    std::cout <<  "\nGroup_1 += sam + bob" << std::endl;
     group_1 += sam + bob;
-    // group_1.Print();
+    group_1.Print();
 
-   //std::cout <<  "\ngroup_1 -= sam + bob;" << std::endl;
+    std::cout <<  "\nGroup_1 -= sam + bob" << std::endl;
     group_1 -= sam + bob;
-    // group_1.Print();
+    group_1.Print();
 
-   //std::cout <<  "\ngroup_1 = group_1 + pl_1 + sam - mary;" << std::endl;
+    std::cout <<  "\nGroup_1 = group_1 + pl_1 + sam - mary" << std::endl;
     group_1 = group_1 + ppl_1 + sam - mary;
-    // group_1.Print();
-   //std::cout <<  "\nppl_1" << std::endl;
-   //  ppl_1.Print();
+    group_1.Print();
+    std::cout <<  "\nppl_1" << std::endl;
+    ppl_1.Print();
 
-   //std::cout <<  "\ngroup_1 = group_1 - bob - alice;" << std::endl;
+    std::cout <<  "\nGroup_1 = group_1 - bob - alice" << std::endl;
     group_1 = group_1 - bob - alice;
-    // group_1.Print();
-   //std::cout <<  "\nppl_1" << std::endl;
-   //  ppl_1.Print();
+    group_1.Print();
+    std::cout <<  "\nppl_1" << std::endl;
+    ppl_1.Print();
 
-   //std::cout <<  "\ngroup_1 += bob + frank;" << std::endl;
+    std::cout <<  "\nGroup_1 += bob + frank" << std::endl;
     group_1 += bob + frank;
-    // group_1.Print();
-   //std::cout <<  "\nppl_1" << std::endl;
-   //  ppl_1.Print();
+    group_1.Print();
+    std::cout <<  "\nppl_1" << std::endl;
+    ppl_1.Print();
 
-   //std::cout <<  "\ngroup_1 -= bob + frank;" << std::endl;
+    std::cout <<  "\nGroup_1 -= bob + frank" << std::endl;
     group_1 -= bob + frank;
-    // group_1.Print();
-   //std::cout <<  "\nppl_1" << std::endl;
-   //  ppl_1.Print();
+    group_1.Print();
+    std::cout <<  "\nppl_1" << std::endl;
+    ppl_1.Print();
 
-   //std::cout <<  "\ngroup_2 = bob + frank;" << std::endl;
+    std::cout <<  "\nGroup_2 = bob + frank" << std::endl;
     group_2 = bob + frank;
-    // group_2.Print();
-   //std::cout <<  "\ngroup_1" << std::endl;
-    // group_1.Print();
-   //std::cout <<  "\ngroup_3 = group_2 + alice - group_1 + bob + mary;" << std::endl;
+    group_2.Print();
+    std::cout <<  "\nGroup_1" << std::endl;
+    group_1.Print();
+    std::cout <<  "\nGroup_3 = group_2 + alice - group_1 + bob + mary" << std::endl;
     group_3 = group_2 + alice - group_1 + bob + mary;
-    // group_3.Print();
+    group_3.Print();
 
-   //std::cout <<  "\ngroup_1 += group_2 - bob - alice;" << std::endl;
+    std::cout <<  "\nGroup_1 += group_2 - bob - alice" << std::endl;
     group_1 += group_2 - bob - alice;
-    // group_1.Print();
+    group_1.Print();
 
-   //std::cout <<  "\ngroup_2" << std::endl;
-    // group_2.Print();
-   //std::cout <<  "\ngroup_1 -= group_2 - bob - alice;" << std::endl;
+    std::cout <<  "\nGroup_2" << std::endl;
+    group_2.Print();
+    std::cout <<  "\nGroup_1 -= group_2 - bob - alice" << std::endl;
     group_1 -= group_2 - bob - alice;
-    // group_1.Print();
+    group_1.Print();
     /************* operators divide & multiply ****************/
-    pat = bob * sally;
+    //pat = bob * sally;
+    //pat.Print();
     //pat = sally / bob;
     /************************* End ****************************/
-   //std::cout <<  "\nEND BASIC TEST...\n" << std::endl;
+    std::cout <<  "END BASIC TEST...\n" << std::endl;
     Test_Data td(pat, bob, frank, sam, alice, mary, sally,
                      ppl_1, ppl_2, ppl_3,
                      group_1, group_2, group_3);
