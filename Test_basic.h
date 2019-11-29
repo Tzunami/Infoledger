@@ -10,6 +10,7 @@
 #define TEST_BASIC_H_
 
 #include "Infoledger.h"
+#include <stdlib.h>
 
 using namespace Infoledger;
 
@@ -23,6 +24,7 @@ void addNewData(People& p) {
             Knowledge* k = new Knowledge();
             person->data.list.push_back(k);
             person->data.list[person->data.list.size()-1]->content = content[elm];
+            person->data.list[person->data.list.size()-1]->skill = rand() % 100 + 1; // 1 to 100
         }
     }
 }
@@ -238,8 +240,10 @@ Test_Data test_basic() {
     pat = bob * sally;
     pat.Print();
 
-    std::cout <<  "\ngroup_2 = sally / bob" << std::endl;
-    group_2 = sally / bob;
+    std::cout <<  "\ngroup_2 = sam / sally" << std::endl;
+    group_2 = sam / sally;
+    sally.Print();
+    sam.Print();
     group_2.Print();
     /************************* End ****************************/
     std::cout <<  "END BASIC TEST...\n" << std::endl;

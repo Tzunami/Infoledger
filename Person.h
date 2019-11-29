@@ -34,6 +34,9 @@ public:
 
     List<Data> data;
     void Print();
+
+protected:
+    void Clean(); // remove DataType==ERROR
 };
 /*********************************************/
 } /* namespace  */

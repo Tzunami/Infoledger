@@ -45,25 +45,16 @@ Person &Person::operator*(Person &p) {
     return *person;
 }
 /********************************************************/
-// BUG HERE
-/*
- * Group_2
-Name: Bob ID: 1 Data: Type: 2, Content: Doctor, Skill: 0
-Name: Frank ID: 2 Data: Type: 2, Content: Developer, Skill: 0
-Bug:
-group_2 = sally / bob
-Name: Sally ID: 6 Data: Type: 2, Content: Dentist, Skill: 0
-*/
-
 People &Person::operator/(Person &p) {
     People* people = new People;
-    people->list.push_back(this);
     if(*this == p) return *people;
-    for(auto& person : people->list)
-        for(auto& data_elm : person->data.list)
-            for(auto& data_compare : p.data.list)
-                // (data_elm->type == p.data.list[0]->type)
-                data_elm->operator/=(*data_compare);
+    const std::string name = "D_" + GetName() + " " + p.GetName();
+    Person* person = new Person(name);
+    for(auto& this_data : this->data.list)
+        for(auto& p_data : p.data.list)
+            this_data->operator/=(*p_data); // BUG HERE
+    person->Clean();
+    if(people->list.size()!=0) people->list.push_back(person);
     return *people;
 }
 /********************************************************/
@@ -71,6 +62,15 @@ void Person::Print() {
     std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: ";
     for(auto& print : data.list) print->Print();
     std::cout << std::endl;
+}
+/*************************************************/
+void Person::Clean() {
+    const unsigned long size = this->data.list.size();
+    for(unsigned long elm=0; elm<size; elm++) {
+        if(this->data.list[elm]->type == DataType::ERROR) {
+            this->data.list.erase(this->data.list.begin() + static_cast<long>(elm--));
+        }
+    }
 }
 /********************************************************/
 } /* namespace Infoledger */
