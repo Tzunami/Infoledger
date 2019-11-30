@@ -23,19 +23,24 @@ public:
     //Data();
     Data(DataType datatype): type(datatype), content(nullptr), skill(0) {}
     Data(DataType datatype, float skl): type(datatype), content(nullptr), skill(skl) {}
-    Data(Data& d): type(d.type), content(d.content), skill(0) {}
+    Data(Data& d): type(d.type), content(d.content), skill(d.skill) {}
     //virtual ~Data() {}    
     void Print();
 
     Data &operator=(Data& d);
-    Data &operator/(Data& d);
+    DblData &operator/(Data& d);
     Data &operator*(Data& d);
-    Data &operator/=(Data& d);
+    //DblData &operator/=(Data& d);
     Data &operator*=(Data& d);
 
     DataType type;
     Content* content;
     float skill;
+};
+/************************************/
+struct DblData {
+    Data *denominator, *remainder;
+    DblData(): denominator(nullptr), remainder(nullptr) {}
 };
 /************************************/
 } /* namespace Infoledger */

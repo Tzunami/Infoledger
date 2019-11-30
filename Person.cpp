@@ -48,13 +48,21 @@ Person &Person::operator*(Person &p) {
 People &Person::operator/(Person &p) {
     People* people = new People;
     if(*this == p) return *people;
-    const std::string name = "D_" + GetName() + " " + p.GetName();
-    Person* person = new Person(name);
-    for(auto& this_data : this->data.list)
-        for(auto& p_data : p.data.list)
-            this_data->operator/=(*p_data); // BUG HERE
-    person->Clean();
-    if(people->list.size()!=0) people->list.push_back(person);
+    const std::string d_name = "D_" + GetName() + " " + p.GetName();
+    const std::string r_name = "R_" + p.GetName();
+    Person* d_person = new Person(d_name);
+    Person* r_person = new Person(r_name);
+    DblData dd;
+    for(auto& this_data : this->data.list) {
+        for(auto& p_data : p.data.list) {
+            dd = this_data->operator/(*p_data);
+            d_person->data.list.push_back(dd.denominator);
+            r_person->data.list.push_back(dd.remainder);
+        }
+    }
+    d_person->Clean();
+    r_person->Clean();
+    *people = *d_person + *r_person;
     return *people;
 }
 /********************************************************/

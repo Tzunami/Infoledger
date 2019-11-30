@@ -16,16 +16,25 @@ Data& Data::operator=(Data& d) {
     return *this;
 }
 /*************************************************/
-Data& Data::operator/(Data& d) {
-    // common denominator
-    Data* data;
-    if ((this->type==d.type)&&(this->content==d.content)) {
-        data = this;
-        data->skill = (this->skill < d.skill) ? this->skill : d.skill;
+DblData& Data::operator/(Data& d) {
+    DblData* dd = new DblData;
+    Data *denominator, *remiander;
+    if ((this->type==d.type)&&(this->content==d.content)) {        
+        if(this->skill > d.skill) {
+            denominator = new Data(d);
+            remiander   = new Data(d);
+            remiander->skill =  (this->skill - d.skill);
+        } else {
+            denominator = nullptr;
+            remiander   = new Data(d);
+        }
     } else {
-        data = new Data(DataType::ERROR);
+        denominator = new Data(DataType::ERROR);
+        remiander = nullptr;
     }
-    return *data;
+    dd->denominator = denominator;
+    dd->remainder = remiander;
+    return *dd;
 }
 /*************************************************/
 Data& Data::operator*(Data& d) {
@@ -38,18 +47,20 @@ Data& Data::operator*(Data& d) {
     }
     return *data;
 }
-/*************************************************/
-Data &Data::operator/=(Data& d) {
-    // common denominator
+/*************************************************
+// REWRITE
+DblData &Data::operator/=(Data& d) {
+    // denominator
+    DblData* dd = new DblData();
     if ((this->type==d.type)&&(this->content==d.content)) {
-        if(this->skill < d.skill) this->skill = d.skill;
+        if(this->skill > d.skill) this->skill = d.skill;
     } else {
         this->type = DataType::ERROR;
         this->skill = 0;
     }
     return *this;
 }
-/*************************************************/
+*************************************************/
 Data &Data::operator*=(Data& d) {
     if ((this->type==d.type)&&(this->content==d.content)) {
         this->skill = (this->skill < d.skill) ? this->skill+std::sqrt(d.skill) : d.skill+std::sqrt(this->skill);
