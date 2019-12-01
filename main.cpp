@@ -9,8 +9,7 @@
 #include <iostream> // Library to print to console
 
 // Testing Exclusive
-#include "Test_basic_ptr.h"
-#include "Test_process_ptr.h"
+#include "Testing.h"
 
 using namespace Infoledger;
 
@@ -35,7 +34,7 @@ int main() {
     } // end for
 
     */
-    std::cout << "End\n";
+    std::cout << "\nEnd\n";
 	return 0;
 }
 

@@ -11,11 +11,11 @@
 
 #include "Infoledger.h"
 #include <stdlib.h>
-
+/*****************************************************/
 using namespace Infoledger;
-
+/*****************************************************/
 Content* content[] = {new Content("CEO"), new Content("Dentist"), new Content("Developer"), new Content("Doctor")};
-
+/*****************************************************/
 void addNewData(People& p) {
     unsigned int elm;
     for(auto& person : p.list) {
@@ -28,7 +28,16 @@ void addNewData(People& p) {
         }
     }
 }
-
+/*****************************************************/
+void MyProcess(Infoledge &il, Person &person, Group &group) {
+    std::cout<<"MyProcess(Person, Group)"<<std::endl;
+    Knowledge *k = new Knowledge();
+    k->content = new Content("Discovery");
+    person.data.list.push_back(k);
+    group.data.list.push_back(k);
+    il.result = k;
+}
+/*****************************************************/
 class Test_Data {
     public:
         Test_Data(){}
@@ -71,7 +80,7 @@ class Test_Data {
         People* people[3];
         Group* group[3];
 };
-
+/*****************************************************/
 Test_Data test_basic() {
     std::cout << "STARTING BASIC TEST..." << std::endl;
     std::cout << "Data Types: 0=ERROR, 1=INFORMATION, 2=KNOWLEDGE" << std::endl;
@@ -245,6 +254,44 @@ Test_Data test_basic() {
     sally.Print();
     sam.Print();
     group_2.Print();
+
+    /*****************************************************/
+    std::cout<<"\nCreating Data, Process, Output "<<std::endl;
+    Information info;
+    Process process = &MyProcess;
+    Database database;
+
+    /*****************************************************/
+    std::cout<<"Creating Infoledge (Information + Knowledge) Type D"<<std::endl;
+    std::cout<<"\nInfoledge il_1(pat, group_A);"<<std::endl;
+    Infoledge il_1(pat, group_1);
+    il_1.Print();
+    database.Save(il_1);
+    std::cout<<"\ndatabase.Save(il_1);"<<std::endl;
+
+    std::cout<<"\nInfoledge il_2(frank, group_B, process);"<<std::endl;
+    Infoledge il_2(frank, group_2, process);
+    il_2.Print();
+
+    std::cout<<"\n\nil_2.RunProcess()"<<std::endl;
+    il_2.RunProcess();
+    std::cout<<"process result:"<<std::endl;
+    il_2.Print();
+
+    std::cout<<"\ndatabase.Save(il_2);"<<std::endl;
+    database.Save(il_2);
+
+    std::cout<<"\ndatabase.Print"<<std::endl;
+    // database.Print();
+
+    std::cout<<"\nil_1 = database.Get(0);"<<std::endl;
+    il_1 = database.Get(0);
+    il_1.Print();
+
+    std::cout<<"\n\nil_1 = database.Get(1);"<<std::endl;
+    il_1 = database.Get(1);
+    il_1.Print();
+
     /************************* End ****************************/
     std::cout <<  "END BASIC TEST...\n" << std::endl;
     Test_Data td(pat, bob, frank, sam, alice, mary, sally,
