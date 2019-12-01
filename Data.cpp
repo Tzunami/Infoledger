@@ -47,20 +47,7 @@ Data& Data::operator*(Data& d) {
     }
     return *data;
 }
-/*************************************************
-// REWRITE
-DblData &Data::operator/=(Data& d) {
-    // denominator
-    DblData* dd = new DblData();
-    if ((this->type==d.type)&&(this->content==d.content)) {
-        if(this->skill > d.skill) this->skill = d.skill;
-    } else {
-        this->type = DataType::ERROR;
-        this->skill = 0;
-    }
-    return *this;
-}
-*************************************************/
+/*************************************************/
 Data &Data::operator*=(Data& d) {
     if ((this->type==d.type)&&(this->content==d.content)) {
         this->skill = (this->skill < d.skill) ? this->skill+std::sqrt(d.skill) : d.skill+std::sqrt(this->skill);

@@ -8,7 +8,7 @@
 #include "Infoledge.h"
 
 namespace Infoledger {
-
+/*************************************************/
 Infoledge::Infoledge():
     person(nullptr), group(nullptr), result(nullptr), process(nullptr) {
     //next = nullptr;
@@ -38,6 +38,12 @@ Infoledge::Infoledge(Person &p, Group &g, Process e):
     //next = nullptr;
     //previous = nullptr;
 	//std::cout<<"Infoledge Constructor"<<std::endl;
+}
+/*************************************************/
+Infoledge::~Infoledge() {
+    delete person;
+    delete group;
+    delete result;
 }
 /*************************************************/
 void Infoledge::Print() {

@@ -17,9 +17,6 @@ namespace Infoledger {
 /*********************************************/
 class Database { //Type C
 public:
-	Database();
-	Database(Database *db);
-	virtual ~Database();
     void Save(Infoledge &i);
 	Infoledge Get(unsigned int i);
     void Print();

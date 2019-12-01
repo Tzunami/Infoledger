@@ -26,11 +26,12 @@ public:
     Group* group;
     Data* result;
 	Process process; //Type E
-	//constructors
+    //constructors & destructors
 	Infoledge();
 	Infoledge(Infoledge *i);
     Infoledge(Person &p, Group &g);
     Infoledge(Person &p, Group &g, Process e);
+    ~Infoledge();
 	//functions
 	void Print();
     void RunProcess() {return (process)(*this, *person, *group);}

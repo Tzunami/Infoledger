@@ -8,19 +8,6 @@
 #include "Database.h"
 
 namespace Infoledger {
-
-Database::Database() {
-	//std::cout<<"Database Constructor"<<std::endl;
-}
-/*************************************************/
-Database::Database(Database *db) {
-	*this = *db;
-	//std::cout<<"Database Constructor"<<std::endl;
-}
-/*************************************************/
-Database::~Database() {
-	//std::cout<<"Database Destructor"<<std::endl;
-}
 /*************************************************/
 void Database::Save(Infoledge &i) {
 	Infoledge info(i);   

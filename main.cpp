@@ -14,27 +14,8 @@
 using namespace Infoledger;
 
 int main() {
-    unsigned int counter = 0;
-    Test_Data td[4];
-
-    td[counter++] = test_basic();
-    /*
-    td[counter++] = test_basic_ptr();
-    td[counter++] = test_process();
-    td[counter++] = test_process_ptr();
-
-    for(unsigned int a=0; a<counter-1; a++) {
-        for(unsigned int b=a+1; b<counter; b++) {
-            if(td[a] != td[b]) {
-                std::cout << a << " != " << b << std::endl;
-                td[a].Print();
-                td[b].Print();
-            } // end if
-        } // end for
-    } // end for
-
-    */
-    std::cout << "\nEnd\n";
+    Test_Data td;
+    td = test_basic();
 	return 0;
 }
 
