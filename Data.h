@@ -41,7 +41,6 @@ public:
 struct DblData {
     Data *denominator, *remainder;
     DblData(): denominator(nullptr), remainder(nullptr) {}
-    ~DblData() {delete denominator; delete remainder;}
 };
 /************************************/
 } /* namespace Infoledger */

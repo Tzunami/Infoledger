@@ -40,12 +40,6 @@ Infoledge::Infoledge(Person &p, Group &g, Process e):
 	//std::cout<<"Infoledge Constructor"<<std::endl;
 }
 /*************************************************/
-Infoledge::~Infoledge() {
-    delete person;
-    delete group;
-    delete result;
-}
-/*************************************************/
 void Infoledge::Print() {
 	std::cout<<"Person:"<<std::endl;
 	person->Print();
