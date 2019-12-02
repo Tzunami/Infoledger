@@ -4,7 +4,7 @@
 namespace Infoledger {
 /*************************************************/
 void Data::Print() {
-    std::cout << "Type: " << type << ", Content: " << content->operator()() << ", Skill: " << skill;
+    std::cout << "Type: " << type << ", Content: " << content->operator()() << ", Skill: " << skill << std::endl;
 }
 /*************************************************/
 Data& Data::operator=(Data& d) {

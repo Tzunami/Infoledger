@@ -14,8 +14,7 @@
 using namespace Infoledger;
 
 int main() {
-    Test_Data td;
-    td = test_basic();
+        test_basic();
 	return 0;
 }
 

@@ -14,7 +14,8 @@ SOURCES += \
         main.cpp
 
 DISTFILES += \
-    README.md
+    README.md \
+    sample
 
 HEADERS += \
     Content.h \

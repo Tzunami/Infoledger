@@ -67,7 +67,7 @@ People &Person::operator/(Person &p) {
 }
 /********************************************************/
 void Person::Print() {
-    std::cout<<"Name: " << GetName() << " ID: " << GetID() << " Data: ";
+    std::cout<<"Name: " << GetName() << " ID: " << GetID() << std::endl << " Data: ";
     for(auto& print : data.list) print->Print();
     std::cout << std::endl;
 }

@@ -81,7 +81,7 @@ class Test_Data {
         Group* group[3];
 };
 /*****************************************************/
-Test_Data test_basic() {
+void test_basic() {
     std::cout << "STARTING BASIC TEST..." << std::endl;
     std::cout << "Data Types: 0=ERROR, 1=INFORMATION, 2=KNOWLEDGE" << std::endl;
     /*****************************************************/
@@ -250,7 +250,7 @@ Test_Data test_basic() {
     pat.Print();
 
     std::cout <<  "\ngroup_2 = sam / sally" << std::endl;
-    group_2 = sam / sally;
+    //group_2 = sam / sally;
     sally.Print();
     sam.Print();
     group_2.Print();
@@ -282,7 +282,7 @@ Test_Data test_basic() {
     database.Save(il_2);
 
     std::cout<<"\ndatabase.Print"<<std::endl;
-    // database.Print();
+    database.Print();
 
     std::cout<<"\nil_1 = database.Get(0);"<<std::endl;
     il_1 = database.Get(0);
@@ -297,7 +297,5 @@ Test_Data test_basic() {
     Test_Data td(pat, bob, frank, sam, alice, mary, sally,
                      ppl_1, ppl_2, ppl_3,
                      group_1, group_2, group_3);
-
-    return td;
 }
 #endif /* TEST_BASIC_H_ */
